@@ -1,13 +1,13 @@
 // index.js
 export const servicesData = [
   {
-    title: "ML || MERN Development",
+    title: "ML | MERN Development",
     description:
       "Your business deserves a fast, secure, and future-proof digital foundation. I develop custom web apps with clean architecture, optimized databases, and seamless integrations—ensuring reliability at every layer.",
     items: [
       {
         title: "Backend Engineering",
-        description: "(REST/GraphQL APIs, Microservices, Auth Systems, NEXT.js)",
+        description: "(REST APIs, Microservices, Auth Systems, NEXT.js)",
       },
       {
         title: "Frontend Excellence",
@@ -88,7 +88,7 @@ export const projects = [
     bgImage: "/assets/backgrounds/blanket.jpg",
     frameworks: [
       { id: 1, name: "React" },
-      { id: 2, name: "Next.js" },
+      { id: 2, name: "" },
       { id: 3, name: "Node.js" },
       { id: 4, name: "MongoDB" },
       { id: 5, name: "Tailwind CSS" },
@@ -96,7 +96,7 @@ export const projects = [
   },
   {
     id: 2,
-    name: "Plant Shop E-commerce",
+    name: "Image Processing Tool",
     description:
       "An online store specializing in rare and decorative plants with a clean, user-friendly interface.",
     href: "",
