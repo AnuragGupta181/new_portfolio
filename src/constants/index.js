@@ -243,21 +243,21 @@ export const openSourceData = {
       prs: "5 Merged PRs",
       summary:
         "Engineered GitHub Copilot and Cursor adapter detection routines, automated CI workflows via GitHub Actions, boosted UI route test coverage by 30%, and slashed Docker setup times by 25%.",
-      link: "https://github.com/AnuragGupta181",
+      link: "https://github.com/AnuragGupta181/gitmesh",
     },
     {
       repo: "Image Processing Tool",
       prs: "3 Merged PRs",
       summary:
         "Integrated high-throughput ML model inference APIs, cutting response latency by 35% across processing pipelines.",
-      link: "https://github.com/AnuragGupta181",
+      link: "https://github.com/AnuragGupta181/phot-fix-ml-fast",
     },
     {
       repo: "Kryptonite & Community Tools",
       prs: "4 Merged PRs",
       summary:
         "Integrated AI chatbot endpoints serving 500+ daily requests, implemented OAuth authentication, and stabilized user login pipelines.",
-      link: "https://github.com/AnuragGupta181",
+      link: "https://github.com/AnuragGupta181/kryptonite_anu",
     },
   ],
 };
@@ -265,12 +265,13 @@ export const openSourceData = {
 export const projects = [
   {
     id: 1,
-    name: "AI Image Processing Platform",
+    name: "FotoFix – AI Image Processing Platform",
     tagline: "Full-Stack Vision Suite with Background Removal, YOLO & OCR",
     description:
       "A production full-stack platform featuring a React frontend and FastAPI backend delivering background removal, YOLO object detection, and OCR. Architected 10+ REST API endpoints as modular services with Redis caching and AWS S3 storage, cutting latency by 60% across 1,000+ uploads.",
-    href: "https://github.com/AnuragGupta181",
-    image: "/assets/projects/plant-shop.jpg",
+    href: "https://github.com/AnuragGupta181/phot-fix-ml-fast",
+    liveUrl: "https://image-processing-tool-c7k8.vercel.app",
+    image: "/assets/projects/fotofix-ai.png",
     bgImage: "/assets/backgrounds/curtains.jpg",
     frameworks: [
       { id: 1, name: "React" },
@@ -288,7 +289,7 @@ export const projects = [
     tagline: "Enterprise RAG & Agentic Workflows with Observability",
     description:
       "Production-ready Retrieval-Augmented Generation system using structured JSON knowledge packs, boosting website engagement by 30%. Architected autonomous agentic workflows with LangChain & LangGraph, full LLM observability via LangSmith, and scaled FastAPI microservices on AWS to absorb 80% traffic spikes.",
-    href: "https://github.com/AnuragGupta181",
+    href: "https://github.com/AnuragGupta181/ccc-ragbot",
     image: "/assets/projects/apple-tech-store.jpg",
     bgImage: "/assets/backgrounds/map.jpg",
     frameworks: [
@@ -307,8 +308,8 @@ export const projects = [
     tagline: "ROS 2 & PX4 Distributed Leader-Follower Swarm Framework",
     description:
       "Architected a distributed 4-UAV swarm framework using ROS 2 Humble, PX4 Autopilot, and Micro-XRCE-DDS with sub-50ms sync latency. Engineered GPS-denied navigation combining 3D depth perception, SLAM, and A* obstacle-free path generation, validated in Gazebo SITL with 95% trajectory tracking accuracy.",
-    href: "https://github.com/AnuragGupta181",
-    image: "/assets/projects/game-store.jpg",
+    href: "https://github.com/AnuragGupta181/drone-mine-detection",
+    image: "/assets/projects/uav-swarm-simulation.png",
     bgImage: "/assets/backgrounds/curtains.jpg",
     frameworks: [
       { id: 1, name: "ROS 2 Humble" },
@@ -325,7 +326,7 @@ export const projects = [
     tagline: "Fine-Tuned Qwen-VL & High-Volume Data Ingestion",
     description:
       "End-to-end multi-modal document extraction pipeline processing 5,000+ PDFs/images into structured JSON schemas with 90%+ extraction accuracy. Fine-tuned Qwen2.5-VL-7B-Instruct with Unsloth & LoRA on Lightning AI cutting GPU VRAM by 45%. Automated ingestion with Playwright.",
-    href: "https://github.com/AnuragGupta181",
+    href: "https://github.com/AnuragGupta181/ocr",
     image: "/assets/projects/mobile-accessories-store.jpg",
     bgImage: "/assets/backgrounds/blanket.jpg",
     frameworks: [
@@ -340,12 +341,12 @@ export const projects = [
   },
   {
     id: 5,
-    name: "High-Availability Cloud Assessment Platform",
+    name: "NextGen – Cloud Assessment & Contest Platform",
     tagline: "AWS ECS Microservices, MongoDB Replica Set & BullMQ",
     description:
       "Enterprise assessment platform engineered for 500+ concurrent users with 99.9% uptime on AWS Free Tier ($50 total cost). Path-based ALB routing for CQRS microservices on ECS, MongoDB multi-node replica set with automated failover, BullMQ/Redis asynchronous task queues, and automated CI/CD.",
-    href: "https://github.com/AnuragGupta181",
-    image: "/assets/projects/electronics-store.jpg",
+    href: "https://github.com/AnuragGupta181/Coding-Plateform",
+    image: "/assets/projects/nextgen-coding-platform.png",
     bgImage: "/assets/backgrounds/poster.jpg",
     frameworks: [
       { id: 1, name: "AWS ECS" },
@@ -363,7 +364,7 @@ export const projects = [
     tagline: "ESP32, ESP32-CAM & Real-Time YOLOv12 Edge Detection",
     description:
       "Autonomous agricultural robot prototype built with ESP32 and ESP32-CAM executing real-time crop pest identification via YOLOv12 at 35% lower cost than commercial solutions. Integrated L298N motor drivers for automated field navigation, potentially reducing manual labor by 80%.",
-    href: "https://github.com/AnuragGupta181",
+    href: "https://github.com/AnuragGupta181/Pestiside-detection",
     image: "/assets/projects/home-decor-store.jpg",
     bgImage: "/assets/backgrounds/table.jpg",
     frameworks: [
