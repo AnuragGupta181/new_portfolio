@@ -1,74 +1,129 @@
 import { useGSAP } from "@gsap/react";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 import Marquee from "../components/Marquee";
-import { socials } from "../constants";
+import { personalInfo, resumes, socials } from "../constants";
+import { Icon } from "@iconify/react/dist/iconify.js";
 import gsap from "gsap";
 
 const Contact = () => {
-  const text = `Got a question, how or project Idea?
-    WE’D love to hear from you and discus further!`;
+  const text = `Have an opportunity, collaboration, or engineering challenge?
+I’d love to connect and discuss how I can add immediate value!`;
+
   const items = [
-    "just imagin, I code",
-    "just imagin, I code",
-    "just imagin, I code",
-    "just imagin, I code",
-    "just imagin, I code",
+    "clean code, scalable systems",
+    "autonomous AI, production ready",
+    "zero-downtime architecture",
+    "clean code, scalable systems",
+    "autonomous AI, production ready",
   ];
+
   useGSAP(() => {
     gsap.from(".social-link", {
       y: 100,
       opacity: 0,
       delay: 0.5,
       duration: 1,
-      stagger: 0.3,
+      stagger: 0.2,
       ease: "back.out",
       scrollTrigger: {
         trigger: ".social-link",
       },
     });
   }, []);
+
   return (
     <section
       id="contact"
-      className="flex flex-col justify-between min-h-screen bg-black"
+      className="flex flex-col justify-between min-h-screen bg-black text-white"
     >
       <div>
         <AnimatedHeaderSection
-          subTitle={"You Dream It, I Code it"}
+          subTitle={"Open to Opportunities • Let's Connect"}
           title={"Contact"}
           text={text}
           textColor={"text-white"}
           withScrollTrigger={true}
         />
-        <div className="flex px-10 font-light text-white uppercase lg:text-[32px] text-[26px] leading-none mb-10">
-          <div className="flex flex-col w-full gap-10">
+        <div className="flex px-10 font-light text-white uppercase lg:text-[32px] text-[26px] leading-none mb-12">
+          <div className="flex flex-col w-full gap-8">
+            {/* Email */}
             <div className="social-link">
               <h2>E-mail</h2>
               <div className="w-full h-px my-2 bg-white/30" />
-              <p className="text-xl tracking-wider lowercase md:text-2xl lg:text-3xl">
-                JohnDoe@gmail.com
-              </p>
+              <a
+                href={`mailto:${personalInfo.email}`}
+                className="text-xl tracking-wider lowercase md:text-2xl lg:text-3xl text-gold hover:text-white transition-colors flex items-center gap-2"
+              >
+                <span>{personalInfo.email}</span>
+                <Icon icon="lucide:arrow-up-right" className="size-6 inline" />
+              </a>
             </div>
+
+            {/* Phone */}
             <div className="social-link">
               <h2>Phone</h2>
               <div className="w-full h-px my-2 bg-white/30" />
-              <p className="text-xl lowercase md:text-2xl lg:text-3xl">
-                +33 7 12 12 32 12
+              <a
+                href={`tel:${personalInfo.phone.replace(/[^0-9+]/g, "")}`}
+                className="text-xl lowercase md:text-2xl lg:text-3xl hover:text-gold transition-colors flex items-center gap-2"
+              >
+                <span>{personalInfo.phone}</span>
+                <Icon icon="lucide:arrow-up-right" className="size-6 inline" />
+              </a>
+            </div>
+
+            {/* Location */}
+            <div className="social-link">
+              <h2>Location</h2>
+              <div className="w-full h-px my-2 bg-white/30" />
+              <p className="text-xl capitalize md:text-2xl lg:text-3xl text-white/80">
+                {personalInfo.location}
               </p>
             </div>
+
+            {/* Social Media Links */}
             <div className="social-link">
-              <h2>Social Media</h2>
+              <h2>Profiles & Network</h2>
               <div className="w-full h-px my-2 bg-white/30" />
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {socials.map((social, index) => (
                   <a
                     key={index}
                     href={social.href}
-                    className="text-xs leading-loose tracking-wides uppercase md:text-sm hover:text-white/80 transition-colors duration-200"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs leading-loose tracking-widest uppercase md:text-sm px-4 py-2 rounded-xl bg-white/10 hover:bg-gold hover:text-black transition-all duration-300 border border-white/10"
                   >
                     {"{ "}
                     {social.name}
                     {" }"}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Quick Resume Direct Download Bar */}
+            <div className="social-link">
+              <h2>Targeted Resumes (PDF)</h2>
+              <div className="w-full h-px my-2 bg-white/30" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                {resumes.map((resume) => (
+                  <a
+                    key={resume.id}
+                    href={resume.filePath}
+                    download={resume.fileName}
+                    className="p-3 rounded-xl bg-white/5 hover:bg-gold/20 border border-white/10 hover:border-gold transition-all text-left flex flex-col justify-between group"
+                  >
+                    <span className="text-[10px] tracking-wider uppercase text-gold font-mono">
+                      {resume.badge}
+                    </span>
+                    <span className="text-sm font-medium text-white group-hover:text-gold transition-colors mt-1">
+                      {resume.title}
+                    </span>
+                    <span className="text-[11px] text-white/50 flex items-center gap-1 mt-2">
+                      <Icon icon="lucide:download" className="size-3" />
+                      <span>Download PDF</span>
+                    </span>
                   </a>
                 ))}
               </div>

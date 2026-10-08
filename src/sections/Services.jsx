@@ -4,12 +4,15 @@ import { servicesData } from "../constants";
 import { useMediaQuery } from "react-responsive";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+
 const Services = () => {
-  const text = `I build secure, high-performance full-stack apps
-    with smooth UX to drive growth 
-    not headaches.`;
+  const text = `I architect resilient distributed systems,
+scalable cloud infrastructure & autonomous AI pipelines
+engineered for peak performance and scale.`;
+
   const serviceRefs = useRef([]);
   const isDesktop = useMediaQuery({ minWidth: "48rem" }); //768px
+
   useGSAP(() => {
     serviceRefs.current.forEach((el) => {
       if (!el) return;
@@ -25,11 +28,12 @@ const Services = () => {
       });
     });
   }, []);
+
   return (
     <section id="services" className="min-h-screen bg-black rounded-t-4xl">
       <AnimatedHeaderSection
-        subTitle={"Behind the scene, Beyond the screen"}
-        title={"Service"}
+        subTitle={"Engineering Architecture • 4 Core Pillars"}
+        title={"Services"}
         text={text}
         textColor={"text-white"}
         withScrollTrigger={true}
@@ -63,6 +67,9 @@ const Services = () => {
                       </span>
                       {item.title}
                     </h3>
+                    <p className="ml-16 text-base tracking-normal text-white/50">
+                      {item.description}
+                    </p>
                     {itemIndex < service.items.length - 1 && (
                       <div className="w-full h-px my-2 bg-white/30" />
                     )}

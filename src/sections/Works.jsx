@@ -10,9 +10,9 @@ const Works = () => {
   const previewRef = useRef(null);
 
   const [currentIndex, setCurrentIndex] = useState(null);
-  const text = `Featured projects that have been meticulously
-    crafted with passion to drive
-    results and impact.`;
+  const text = `Flagship engineering systems spanning
+autonomous AI pipelines, distributed robotics swarms,
+and cloud-native microservices.`;
 
   const mouse = useRef({ x: 0, y: 0 });
   const moveX = useRef(null);
@@ -33,10 +33,11 @@ const Works = () => {
       opacity: 0,
       delay: 0.5,
       duration: 1,
-      stagger: 0.3,
+      stagger: 0.2,
       ease: "back.out",
       scrollTrigger: {
-        trigger: "#project",
+        trigger: "#work",
+        start: "top 70%",
       },
     });
   }, []);
@@ -99,10 +100,16 @@ const Works = () => {
     moveY.current(mouse.current.y);
   };
 
+  const handleProjectClick = (href) => {
+    if (href) {
+      window.open(href, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
-    <section id="work" className="flex flex-col min-h-screen">
+    <section id="work" className="flex flex-col min-h-screen bg-[#e5e5e0]">
       <AnimatedHeaderSection
-        subTitle={"Logic meets Aesthetics, Seamlessly"}
+        subTitle={"Engineering Meets Innovation, Seamlessly"}
         title={"Works"}
         text={text}
         textColor={"text-black"}
@@ -116,7 +123,8 @@ const Works = () => {
           <div
             key={project.id}
             id="project"
-            className="relative flex flex-col gap-1 py-5 cursor-pointer group md:gap-0"
+            onClick={() => handleProjectClick(project.href)}
+            className="relative flex flex-col gap-2 py-6 cursor-pointer group md:gap-0"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
           >
@@ -128,52 +136,83 @@ const Works = () => {
               className="absolute inset-0 hidden md:block duration-200 bg-black -z-10 clip-path"
             />
 
-            {/* title */}
-            <div className="flex justify-between px-10 text-black transition-all duration-500 md:group-hover:px-12 md:group-hover:text-white">
-              <h2 className="lg:text-[32px] text-[26px] leading-none">
-                {project.name}
-              </h2>
-              <Icon icon="lucide:arrow-up-right" className="md:size-6 size-5" />
+            {/* title & tagline */}
+            <div className="flex flex-col md:flex-row md:items-center justify-between px-10 text-black transition-all duration-500 md:group-hover:px-12 md:group-hover:text-white">
+              <div>
+                <h2 className="lg:text-[34px] text-[26px] leading-snug font-normal">
+                  {project.name}
+                </h2>
+                {project.tagline && (
+                  <p className="text-xs uppercase tracking-widest text-black/60 md:group-hover:text-gold transition-colors duration-500 mt-1">
+                    {project.tagline}
+                  </p>
+                )}
+              </div>
+              <div className="flex items-center gap-2 mt-2 md:mt-0">
+                <span className="text-xs tracking-wider uppercase opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 hidden md:inline">
+                  View Code
+                </span>
+                <Icon
+                  icon="lucide:arrow-up-right"
+                  className="md:size-6 size-5 transition-transform duration-300 md:group-hover:translate-x-1 md:group-hover:-translate-y-1"
+                />
+              </div>
             </div>
+
+            {/* description snippet */}
+            <div className="px-10 md:group-hover:px-12 text-black/70 md:group-hover:text-white/80 text-sm font-light max-w-4xl transition-all duration-500 my-2">
+              <p>{project.description}</p>
+            </div>
+
             {/* divider */}
-            <div className="w-full h-0.5 bg-black/80" />
-            {/* framework */}
-            <div className="flex px-10 text-xs leading-loose uppercase transtion-all duration-500 md:text-sm gap-x-5 md:group-hover:px-12">
+            <div className="w-full h-px bg-black/20 my-2" />
+
+            {/* frameworks */}
+            <div className="flex flex-wrap px-10 text-xs leading-loose uppercase transition-all duration-500 md:text-xs gap-x-4 gap-y-1 md:group-hover:px-12">
               {project.frameworks.map((framework) => (
-                <p
+                <span
                   key={framework.id}
-                  className="text-black transition-colors duration-500 md:group-hover:text-white"
+                  className="px-2.5 py-0.5 rounded-full bg-black/5 md:group-hover:bg-white/10 text-black transition-colors duration-500 md:group-hover:text-white border border-black/10 md:group-hover:border-white/20"
                 >
                   {framework.name}
-                </p>
+                </span>
               ))}
             </div>
+
             {/* mobile preview image */}
-            <div className="relative flex items-center justify-center px-10 md:hidden h-[400px]">
+            <div className="relative flex items-center justify-center px-10 mt-4 md:hidden h-[300px]">
               <img
                 src={project.bgImage}
                 alt={`${project.name}-bg-image`}
-                className="object-cover w-full h-full rounded-md brightness-50"
+                className="object-cover w-full h-full rounded-2xl brightness-50"
               />
               <img
                 src={project.image}
                 alt={`${project.name}-image`}
-                className="absolute bg-center px-14 rounded-xl"
+                className="absolute bg-center px-6 rounded-xl max-h-[220px] object-cover"
               />
             </div>
           </div>
         ))}
-        {/* desktop Flaoting preview image */}
+
+        {/* desktop Floating preview image */}
         <div
           ref={previewRef}
-          className="fixed -top-2/6 left-0 z-50 overflow-hidden border-8 border-black pointer-events-none w-[960px] md:block hidden opacity-0"
+          className="fixed -top-2/6 left-0 z-50 overflow-hidden border-4 border-black rounded-2xl shadow-2xl pointer-events-none w-[560px] h-[360px] md:block hidden opacity-0 bg-black"
         >
           {currentIndex !== null && (
-            <img
-              src={projects[currentIndex].image}
-              alt="preview"
-              className="object-cover w-full h-full"
-            />
+            <div className="relative w-full h-full">
+              <img
+                src={projects[currentIndex].bgImage}
+                alt="bg preview"
+                className="absolute inset-0 object-cover w-full h-full brightness-40"
+              />
+              <img
+                src={projects[currentIndex].image}
+                alt="preview"
+                className="relative z-10 object-contain w-full h-full p-4"
+              />
+            </div>
           )}
         </div>
       </div>

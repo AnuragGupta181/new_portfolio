@@ -6,18 +6,20 @@ import gsap from "gsap";
 const ContactSummary = () => {
   const containerRef = useRef(null);
   const items = [
-    "Innovation",
+    "Distributed Systems",
+    "Cloud Architecture",
+    "Agentic AI",
     "Precision",
-    "Trust",
-    "Collaboration",
+    "High Availability",
     "Excellence",
   ];
   const items2 = [
-    "contact us",
-    "contact us",
-    "contact us",
-    "contact us",
-    "contact us",
+    "get in touch",
+    "hire anurag",
+    "get in touch",
+    "open to work",
+    "get in touch",
+    "hire anurag",
   ];
 
   useGSAP(() => {
@@ -33,18 +35,19 @@ const ContactSummary = () => {
       },
     });
   }, []);
+
   return (
     <section
       ref={containerRef}
-      className="flex flex-col items-center justify-between min-h-screen gap-12 mt-16"
+      className="flex flex-col items-center justify-between min-h-screen gap-12 mt-16 bg-[#e5e5e0]"
     >
       <Marquee items={items} />
-      <div className="overflow-hidden font-light text-center contact-text-responsive">
+      <div className="overflow-hidden font-light text-center contact-text-responsive px-4">
         <p>
           “ Let’s build a <br />
-          <span className="font-normal">memorable</span> &{" "}
-          <span className="italic">inspiring</span> <br />
-          web application <span className="text-gold">together</span> “
+          <span className="font-normal">resilient</span> &{" "}
+          <span className="italic">intelligent</span> <br />
+          scalable system <span className="text-gold">together</span> “
         </p>
       </div>
       <Marquee

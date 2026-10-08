@@ -1,181 +1,541 @@
 // index.js
+export const personalInfo = {
+  name: "Anurag Gupta",
+  roleTitle: "Software Engineer • LFX Mentee • AI & Cloud Infrastructure",
+  headline: "LFX Mentee @ GitMesh • Open Source • Distributed Systems & AI",
+  email: "job4anurag11@gmail.com",
+  phone: "+91-9151491382",
+  location: "Ghaziabad, Uttar Pradesh, India",
+  college: "Ajay Kumar Garg Engineering College (AKGEC)",
+  degree: "B.Tech in Electronics and Computing Engineering",
+  cgpa: "7.2",
+  github: "https://github.com/AnuragGupta181",
+  linkedin: "https://www.linkedin.com/in/anuragg1817",
+  stats: [
+    { label: "Hands-on Experience", value: "1+ Yrs" },
+    { label: "Merged Open Source PRs", value: "12+" },
+    { label: "Concurrent Users Served", value: "500+" },
+    { label: "Specialized Resumes", value: "4 Roles" },
+  ],
+};
+
+export const resumes = [
+  {
+    id: "se",
+    title: "Software Engineer",
+    role: "Full-Stack, Backend & Distributed Systems",
+    fileName: "Anurag_Resume_SE.pdf",
+    filePath: "/resume/Anurag_Resume_SE.pdf",
+    tagline: "TypeScript, Node.js, FastAPI, Microservices, Redis, PostgreSQL",
+    badge: "Core Role",
+  },
+  {
+    id: "ai",
+    title: "AI & MLOps Engineer",
+    role: "Vision-Language Models, Agentic AI, MCP & RAG",
+    fileName: "Anurag_Resume_AI.pdf",
+    filePath: "/resume/Anurag_Resume_AI.pdf",
+    tagline: "Qwen2.5-VL, LoRA Fine-Tuning, LangChain, LangGraph, Model Context Protocol",
+    badge: "Specialized",
+  },
+  {
+    id: "devops",
+    title: "DevOps & Cloud Engineer",
+    role: "Cloud Systems, AWS ECS, ALB & CI/CD",
+    fileName: "Anurag_Resume-DevOps.pdf",
+    filePath: "/resume/Anurag_Resume-DevOps.pdf",
+    tagline: "AWS (ECS, ALB, WAF), Docker, GitHub Actions, MongoDB Replica Sets, Nginx",
+    badge: "Infrastructure",
+  },
+  {
+    id: "ece",
+    title: "Electronics & Robotics",
+    role: "Embedded Systems, ROS 2, UAV Swarms & IoT",
+    fileName: "Anurag_Resume-ECE-10sep.pdf",
+    filePath: "/resume/Anurag_Resume-ECE-10sep.pdf",
+    tagline: "ROS 2 Humble, PX4 Autopilot, NI LabVIEW Core I & II, ESP32, YOLOv12 Edge",
+    badge: "Hardware & Edge",
+  },
+];
+
 export const servicesData = [
   {
-    title: "ML | MERN Development",
+    title: "Backend & Distributed Systems",
     description:
-      "Your business deserves a fast, secure, and future-proof digital foundation. I develop custom web apps with clean architecture, optimized databases, and seamless integrations—ensuring reliability at every layer.",
+      "Building high-concurrency microservices, resilient REST APIs, and event-driven architectures designed to scale effortlessly without downtime or bottleneck regressions.",
     items: [
       {
-        title: "Backend Engineering",
-        description: "(REST APIs, Microservices, Auth Systems, NEXT.js)",
+        title: "Microservices & API Architecture",
+        description: "(REST APIs, FastAPI, Node.js, Express, CQRS Patterns, JWT & OAuth)",
       },
       {
-        title: "Frontend Excellence",
-        description: "(React, Vite, TypeScript, Interactive UI/UX, NEXT.js)",
+        title: "Database Engineering & Caching",
+        description: "(PostgreSQL, MongoDB Replica Sets, Redis Caching, Drizzle ORM, Schema Tuning)",
       },
       {
-        title: "ML Devloper",
-        description: "(Data Preprocessing, Model Training, Deployment with FAST API, NLP, Deep Learning, LangChain)",
+        title: "Asynchronous Job Queues",
+        description: "(BullMQ, Redis message queues, background compute decoupling, high throughput)",
       },
     ],
   },
   {
-    title: "DevOps & Cloud Solutions",
+    title: "Cloud Infrastructure & DevOps",
     description:
-      "Deploying software shouldn't be a gamble. I automate infrastructure, enforce security, and leverage cloud platforms (AWS/Azure) to keep your app running smoothly—24/7, at any scale.",
+      "Automating deployment pipelines, containerizing workloads, and orchestrating highly available cloud infrastructure on AWS that slashes operational costs while guaranteeing 99.9% uptime.",
     items: [
       {
-        title: "CI/CD Pipelines",
-        description: "(GitHub Actions, Docker, Kubernetes, Terraform, Jenkins, Ansible, Redis)",
+        title: "AWS Cloud Orchestration",
+        description: "(ECS, EC2, Application Load Balancers (ALB), S3 Object Storage, WAF)",
       },
       {
-        title: "Server Management ",
-        description: "(Linux, Nginx, Load Balancing)",
+        title: "Automated CI/CD Workflows",
+        description: "(GitHub Actions, Docker containerization, regression testing, automated releases)",
       },
       {
-        title: "Performance Tuning",
-        description: "(Caching, Compression, Lighthouse 90+ Scores)",
+        title: "High Availability & Traffic Routing",
+        description: "(Nginx reverse proxy, Cloudflare CDN/DDoS mitigation, zero-downtime rolling deploys)",
       },
     ],
   },
   {
-    title: "Security & Optimization",
+    title: "Agentic AI & MLOps Engineering",
     description:
-      "Slow or hacked apps destroy trust. I harden security (XSS/SQLI protection, OAuth) and optimize bottlenecks so your app stays fast, safe, and scalable as you grow.",
+      "Bridging machine learning research into production-grade systems—from fine-tuning multi-modal vision-language models to architecting autonomous agentic RAG workflows.",
     items: [
       {
-        title: "Code Audits",
-        description: "(Refactoring, Tech Debt Cleanup)",
+        title: "Vision-Language Models & Fine-Tuning",
+        description: "(Qwen2.5-VL-7B-Instruct, Unsloth, LoRA on Lightning AI, 45% VRAM reduction)",
       },
       {
-        title: "Pen Testing",
-        description: "(Vulnerability Assessments)",
+        title: "Multi-Agent Systems & MCP",
+        description: "(Model Context Protocol servers, LangChain, LangGraph, LangSmith observability)",
       },
       {
-        title: "SEO Tech Stack",
-        description: "(SSR, Metadata, Structured Data)",
+        title: "Document AI & Computer Vision",
+        description: "(Multi-modal OCR with Playwright & Python, YOLOv12, OpenCV, high-throughput inference)",
       },
     ],
   },
   {
-    title: "Machine Learning Solutions",
+    title: "Robotics & Embedded Systems",
     description:
-      "Unlock the power of data with tailored ML solutions. From predictive analytics to natural language processing, I build and deploy models that drive smarter decisions and innovative features.",
+      "Engineering hardware-software synergies—from autonomous multi-UAV swarm synchronization to edge IoT intelligence and certified NI LabVIEW instrumentation.",
     items: [
       {
-        title: "Custom Chatbots",
-        description: "(Customer Support, Virtual Assistants)",
+        title: "Autonomous Multi-UAV Swarms",
+        description: "(ROS 2 Humble, PX4 Autopilot, Micro-XRCE-DDS, Gazebo SITL, SLAM, sub-50ms sync)",
       },
       {
-        title: "Recommendation Systems",
-        description: "(Personalized User Experiences, Product Suggestions)",
+        title: "Edge AI & Autonomous Robotics",
+        description: "(ESP32, ESP32-CAM, real-time YOLO crop pest detection, L298N motor drivers)",
       },
       {
-        title: "E-Commerce",
-        description: "(Sales Forecasting, Inventory Management)",
+        title: "Instrumentation & Signal Processing",
+        description: "(NI LabVIEW Core I & II Associate Developer, NI MyRIO, NI Multisim digital logic)",
       },
     ],
   },
 ];
-export const projects = [
+
+export const experienceData = [
   {
     id: 1,
-    name: "Mobile Accessories E-commerce",
+    role: "Open Source Software Engineer (LFX Mentee)",
+    company: "GitMesh – The Linux Foundation",
+    period: "Jun 2026 – Present",
+    type: "Remote",
+    badge: "Linux Foundation Mentorship",
     description:
-      "An online store specializing in phone accessories including cases, chargers, cables, and power banks with MagSafe compatibility.",
-    href: "",
-    image: "/assets/projects/mobile-accessories-store.jpg",
-    bgImage: "/assets/backgrounds/blanket.jpg",
-    frameworks: [
-      { id: 1, name: "React" },
-      { id: 2, name: "" },
-      { id: 3, name: "Node.js" },
-      { id: 4, name: "MongoDB" },
-      { id: 5, name: "Tailwind CSS" },
+      "Contributing to GitMesh, an open-source decentralized developer-tooling and software infrastructure platform with 15+ pull requests and 30+ code reviews across backend services, testing, and CI/CD.",
+    highlights: [
+      "Engineered infrastructure for multi-agent AI orchestration and Model Context Protocol (MCP) servers across multi-repo environments.",
+      "Developed TypeScript/Node.js microservices and REST API integrations, automating GitHub-based workflows and reducing manual dev tasks by 40%.",
+      "Built GitHub Actions CI/CD pipelines with automated unit/integration testing, cutting build-and-test cycle time by 35%.",
+      "Optimized PostgreSQL schemas via Drizzle ORM and integrated Redis caching, boosting query response times by 30%.",
+    ],
+    technologies: [
+      "TypeScript",
+      "Node.js",
+      "Docker",
+      "PostgreSQL",
+      "Redis",
+      "Drizzle ORM",
+      "GitHub Actions",
+      "MCP",
     ],
   },
   {
     id: 2,
-    name: "Image Processing Tool",
+    role: "MLOps / Software Engineering Intern",
+    company: "Carbon Crunch",
+    period: "Jun 2026 – Aug 2026",
+    type: "Noida, Uttar Pradesh (Hybrid)",
+    badge: "Industry Internship",
     description:
-      "An online store specializing in rare and decorative plants with a clean, user-friendly interface.",
-    href: "",
-    image: "/assets/projects/plant-shop.jpg",
-    bgImage: "/assets/backgrounds/curtains.jpg",
-    frameworks: [
-      { id: 1, name: "React" },
-      { id: 2, name: "Next.js" },
-      { id: 3, name: "Stripe API" },
-      { id: 4, name: "Tailwind CSS" },
+      "Engineered high-volume multi-modal data extraction pipelines and fine-tuned open-weight vision-language models for enterprise document processing.",
+    highlights: [
+      "Engineered Python document-processing and OCR pipelines that extracted structured data from 5,000+ PDFs and images into standardized JSON schemas with 90%+ accuracy.",
+      "Fine-tuned Qwen2.5-VL-7B-Instruct using Unsloth and LoRA on Lightning AI, reducing GPU VRAM consumption by 45% and accelerating training cycles by 30%.",
+      "Automated high-volume web ingestion via Playwright, maintaining 99.9% pipeline reliability and reducing manual data-entry effort by 60%.",
+      "Benchmarked Florence, Meta Llama, and Azure AI inference, cutting cloud runtime costs by 35%, and deployed Dockerized FastAPI REST endpoints.",
+    ],
+    technologies: [
+      "Python",
+      "FastAPI",
+      "Playwright",
+      "Docker",
+      "Qwen2.5-VL",
+      "Unsloth",
+      "LoRA",
+      "Lightning AI",
+      "OpenCV",
     ],
   },
   {
     id: 3,
-    name: "Apple Tech Marketplace",
+    role: "Machine Learning & DevOps Lead / Cloud Infrastructure Engineer",
+    company: "Cloud Computing Cell – AKGEC",
+    period: "Oct 2025 – Present",
+    type: "Ghaziabad, Uttar Pradesh",
+    badge: "Technical Leadership",
     description:
-      "An e-commerce platform for Apple products and accessories with deals and category filtering.",
-    href: "",
-    image: "/assets/projects/apple-tech-store.jpg",
-    bgImage: "/assets/backgrounds/map.jpg",
-    frameworks: [
-      { id: 1, name: "Blazor" },
-      { id: 2, name: "ASP.NET Core" },
-      { id: 3, name: "SQL Server" },
-      { id: 4, name: "Bootstrap" },
+      "Led an engineering team of 5 to architect, containerize, and deploy scalable cloud backend systems and microservices serving 500+ concurrent users with 99.9% uptime.",
+    highlights: [
+      "Deployed high-availability platform on AWS (ECS, EC2, ALB) supporting 500+ concurrent users at just $50 infrastructure cost via Free Tier optimizations.",
+      "Decomposed monolithic apps into 4+ microservices on AWS ECS with Application Load Balancer routing (CQRS pattern) enabling zero-downtime releases.",
+      "Configured multi-node MongoDB Replica Set with automated failover, Nginx reverse proxy, and Cloudflare WAF/CDN.",
+      "Architected asynchronous job processing with BullMQ + Redis, offloading compute-intensive tasks and cutting average API response time by 50%.",
+      "Automated build-test-deploy with GitHub Actions CI/CD + Docker, cutting deployment time from 45 minutes to under 5 minutes.",
+    ],
+    technologies: [
+      "AWS (ECS, ALB, EC2, S3, WAF)",
+      "Docker",
+      "MongoDB",
+      "Redis",
+      "BullMQ",
+      "GitHub Actions",
+      "Nginx",
+      "Cloudflare",
     ],
   },
   {
     id: 4,
-    name: "Electronics & Gadgets Store",
+    role: "LabVIEW Trainee",
+    company: "Tifac Lab",
+    period: "Feb 2025 – Present",
+    type: "Ghaziabad, Uttar Pradesh",
+    badge: "Embedded Instrumentation",
     description:
-      "A multi-category online shop featuring electronics, home appliances, and gaming gear with special offers.",
-    href: "",
-    image: "/assets/projects/electronics-store.jpg",
-    bgImage: "/assets/backgrounds/poster.jpg",
+      "Engineered hardware-in-the-loop signal processing systems and digital instrumentation interfaces.",
+    highlights: [
+      "Engineered an 8x8 Matrix Keypad interface integrated with NI MyRIO, enabling real-time digital input signal processing and visualization.",
+      "Developed custom LabVIEW Virtual Instruments (VIs) decoding matrix inputs with 99% accuracy, reducing data latency by 40%.",
+    ],
+    technologies: ["NI LabVIEW", "NI MyRIO", "Digital Signal Processing", "Virtual Instruments"],
+  },
+];
+
+export const openSourceData = {
+  totalPRs: "12+ Merged PRs",
+  contributions: [
+    {
+      repo: "GitMesh (The Linux Foundation)",
+      prs: "5 Merged PRs",
+      summary:
+        "Engineered GitHub Copilot and Cursor adapter detection routines, automated CI workflows via GitHub Actions, boosted UI route test coverage by 30%, and slashed Docker setup times by 25%.",
+      link: "https://github.com/AnuragGupta181",
+    },
+    {
+      repo: "Image Processing Tool",
+      prs: "3 Merged PRs",
+      summary:
+        "Integrated high-throughput ML model inference APIs, cutting response latency by 35% across processing pipelines.",
+      link: "https://github.com/AnuragGupta181",
+    },
+    {
+      repo: "Kryptonite & Community Tools",
+      prs: "4 Merged PRs",
+      summary:
+        "Integrated AI chatbot endpoints serving 500+ daily requests, implemented OAuth authentication, and stabilized user login pipelines.",
+      link: "https://github.com/AnuragGupta181",
+    },
+  ],
+};
+
+export const projects = [
+  {
+    id: 1,
+    name: "AI Image Processing Platform",
+    tagline: "Full-Stack Vision Suite with Background Removal, YOLO & OCR",
+    description:
+      "A production full-stack platform featuring a React frontend and FastAPI backend delivering background removal, YOLO object detection, and OCR. Architected 10+ REST API endpoints as modular services with Redis caching and AWS S3 storage, cutting latency by 60% across 1,000+ uploads.",
+    href: "https://github.com/AnuragGupta181",
+    image: "/assets/projects/plant-shop.jpg",
+    bgImage: "/assets/backgrounds/curtains.jpg",
     frameworks: [
-      { id: 1, name: "Vue.js" },
-      { id: 2, name: "Laravel" },
-      { id: 3, name: "MySQL" },
-      { id: 4, name: "SCSS" },
+      { id: 1, name: "React" },
+      { id: 2, name: "FastAPI" },
+      { id: 3, name: "YOLO" },
+      { id: 4, name: "OpenCV" },
+      { id: 5, name: "Redis" },
+      { id: 6, name: "AWS S3" },
+      { id: 7, name: "Docker" },
+    ],
+  },
+  {
+    id: 2,
+    name: "Generative AI & RAG Platform",
+    tagline: "Enterprise RAG & Agentic Workflows with Observability",
+    description:
+      "Production-ready Retrieval-Augmented Generation system using structured JSON knowledge packs, boosting website engagement by 30%. Architected autonomous agentic workflows with LangChain & LangGraph, full LLM observability via LangSmith, and scaled FastAPI microservices on AWS to absorb 80% traffic spikes.",
+    href: "https://github.com/AnuragGupta181",
+    image: "/assets/projects/apple-tech-store.jpg",
+    bgImage: "/assets/backgrounds/map.jpg",
+    frameworks: [
+      { id: 1, name: "FastAPI" },
+      { id: 2, name: "LangChain" },
+      { id: 3, name: "LangGraph" },
+      { id: 4, name: "LangSmith" },
+      { id: 5, name: "AWS" },
+      { id: 6, name: "Python" },
+      { id: 7, name: "MLOps" },
+    ],
+  },
+  {
+    id: 3,
+    name: "Autonomous Multi-UAV Swarm System",
+    tagline: "ROS 2 & PX4 Distributed Leader-Follower Swarm Framework",
+    description:
+      "Architected a distributed 4-UAV swarm framework using ROS 2 Humble, PX4 Autopilot, and Micro-XRCE-DDS with sub-50ms sync latency. Engineered GPS-denied navigation combining 3D depth perception, SLAM, and A* obstacle-free path generation, validated in Gazebo SITL with 95% trajectory tracking accuracy.",
+    href: "https://github.com/AnuragGupta181",
+    image: "/assets/projects/game-store.jpg",
+    bgImage: "/assets/backgrounds/curtains.jpg",
+    frameworks: [
+      { id: 1, name: "ROS 2 Humble" },
+      { id: 2, name: "PX4 Autopilot" },
+      { id: 3, name: "Gazebo SITL" },
+      { id: 4, name: "SLAM" },
+      { id: 5, name: "C++" },
+      { id: 6, name: "Python" },
+    ],
+  },
+  {
+    id: 4,
+    name: "Carbon Crunch Multi-Modal OCR Pipeline",
+    tagline: "Fine-Tuned Qwen-VL & High-Volume Data Ingestion",
+    description:
+      "End-to-end multi-modal document extraction pipeline processing 5,000+ PDFs/images into structured JSON schemas with 90%+ extraction accuracy. Fine-tuned Qwen2.5-VL-7B-Instruct with Unsloth & LoRA on Lightning AI cutting GPU VRAM by 45%. Automated ingestion with Playwright.",
+    href: "https://github.com/AnuragGupta181",
+    image: "/assets/projects/mobile-accessories-store.jpg",
+    bgImage: "/assets/backgrounds/blanket.jpg",
+    frameworks: [
+      { id: 1, name: "Python" },
+      { id: 2, name: "Qwen2.5-VL" },
+      { id: 3, name: "Playwright" },
+      { id: 4, name: "Unsloth" },
+      { id: 5, name: "LoRA" },
+      { id: 6, name: "FastAPI" },
+      { id: 7, name: "Docker" },
     ],
   },
   {
     id: 5,
-    name: "Home Decor Marketplace",
+    name: "High-Availability Cloud Assessment Platform",
+    tagline: "AWS ECS Microservices, MongoDB Replica Set & BullMQ",
     description:
-      "A curated collection of designer home decor items, including furniture and artisan vases.",
-    href: "",
-    image: "/assets/projects/home-decor-store.jpg",
-    bgImage: "/assets/backgrounds/table.jpg",
+      "Enterprise assessment platform engineered for 500+ concurrent users with 99.9% uptime on AWS Free Tier ($50 total cost). Path-based ALB routing for CQRS microservices on ECS, MongoDB multi-node replica set with automated failover, BullMQ/Redis asynchronous task queues, and automated CI/CD.",
+    href: "https://github.com/AnuragGupta181",
+    image: "/assets/projects/electronics-store.jpg",
+    bgImage: "/assets/backgrounds/poster.jpg",
     frameworks: [
-      { id: 1, name: "Angular" },
-      { id: 2, name: "Firebase" },
-      { id: 3, name: "GraphQL" },
-      { id: 4, name: "Material UI" },
+      { id: 1, name: "AWS ECS" },
+      { id: 2, name: "Docker" },
+      { id: 3, name: "MongoDB" },
+      { id: 4, name: "Redis" },
+      { id: 5, name: "BullMQ" },
+      { id: 6, name: "GitHub Actions" },
+      { id: 7, name: "Nginx" },
     ],
   },
   {
     id: 6,
-    name: "Digital Game Store",
+    name: "Pesticide Detection Agricultural Robot",
+    tagline: "ESP32, ESP32-CAM & Real-Time YOLOv12 Edge Detection",
     description:
-      "A gaming platform featuring discounted titles, top sellers, and genre-based browsing.",
-    href: "",
-    image: "/assets/projects/game-store.jpg",
-    bgImage: "/assets/backgrounds/curtains.jpg",
+      "Autonomous agricultural robot prototype built with ESP32 and ESP32-CAM executing real-time crop pest identification via YOLOv12 at 35% lower cost than commercial solutions. Integrated L298N motor drivers for automated field navigation, potentially reducing manual labor by 80%.",
+    href: "https://github.com/AnuragGupta181",
+    image: "/assets/projects/home-decor-store.jpg",
+    bgImage: "/assets/backgrounds/table.jpg",
     frameworks: [
-      { id: 1, name: "Svelte" },
-      { id: 2, name: "Node.js" },
-      { id: 3, name: "MongoDB" },
-      { id: 4, name: "Chakra UI" },
+      { id: 1, name: "ESP32" },
+      { id: 2, name: "YOLOv12" },
+      { id: 3, name: "OpenCV" },
+      { id: 4, name: "L298N" },
+      { id: 5, name: "MicroPython" },
+      { id: 6, name: "IoT 4.0" },
     ],
   },
 ];
-export const socials = [
-  { name: "Instagram", href: "https://www.instagram.com/ali.sanatidev/reels/" },
+
+export const skillsData = {
+  categories: [
+    {
+      name: "Programming Languages",
+      skills: ["Python", "TypeScript", "JavaScript", "C++", "SQL", "HTML5", "CSS3"],
+    },
+    {
+      name: "AI & Machine Learning",
+      skills: [
+        "Agentic AI",
+        "Model Context Protocol (MCP)",
+        "Fine-Tuning (Unsloth, LoRA)",
+        "Qwen2.5-VL-7B-Instruct",
+        "RAG Systems",
+        "LangChain & LangGraph",
+        "LangSmith Tracing",
+        "YOLO / YOLOv12",
+        "OpenCV",
+        "Document OCR",
+      ],
+    },
+    {
+      name: "Cloud & DevOps",
+      skills: [
+        "AWS (ECS, ALB, EC2, S3, WAF)",
+        "Docker Containerization",
+        "CI/CD (GitHub Actions)",
+        "CQRS Microservices",
+        "Linux Administration",
+        "Nginx Reverse Proxy",
+        "Cloudflare CDN / Security",
+        "Zero-Downtime Deployments",
+      ],
+    },
+    {
+      name: "Backend & Databases",
+      skills: [
+        "Node.js",
+        "Express.js",
+        "FastAPI",
+        "PostgreSQL",
+        "MongoDB (Replica Sets)",
+        "Redis Caching",
+        "Drizzle ORM",
+        "BullMQ Task Queues",
+        "REST APIs & JWT/OAuth",
+      ],
+    },
+    {
+      name: "Frontend & Web",
+      skills: ["React.js", "Next.js", "Tailwind CSS", "Vite", "GSAP Animations", "Three.js"],
+    },
+    {
+      name: "Robotics & Hardware (ECE)",
+      skills: [
+        "ROS 2 Humble",
+        "PX4 Autopilot",
+        "Micro-XRCE-DDS",
+        "Gazebo SITL",
+        "SLAM & A* Pathfinding",
+        "NI LabVIEW Core I & II",
+        "NI MyRIO",
+        "NI Multisim",
+        "ESP32 & IoT 4.0",
+      ],
+    },
+    {
+      name: "Developer Tools & Testing",
+      skills: [
+        "Playwright",
+        "Git & GitHub",
+        "Postman",
+        "Claude Code",
+        "VS Code",
+        "PyCharm",
+        "Unit & Integration Testing",
+        "Agile / Scrum",
+      ],
+    },
+  ],
+};
+
+export const educationData = [
   {
-    name: "Youtube",
-    href: "https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA",
+    degree: "B.Tech in Electronics and Computing Engineering",
+    institution: "Ajay Kumar Garg Engineering College (AKGEC)",
+    location: "Ghaziabad, Uttar Pradesh",
+    period: "2023 – Present",
+    score: "CGPA: 7.2",
+    details:
+      "Focusing on Distributed Systems, Cloud Architecture, Artificial Intelligence, and Embedded Robotics. Active technical lead in the Cloud Computing Cell.",
   },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/ali-sanati/" },
-  { name: "GitHub", href: "https://github.com/Ali-Sanati" },
+  {
+    degree: "Senior Secondary Education (Class XII)",
+    institution: "PM SHRI Kendriya Vidyalaya",
+    location: "Babina, Uttar Pradesh",
+    period: "Completed 2023",
+    score: "77%",
+    details: "Mathematics, Physics, Chemistry, and Computer Science foundation.",
+  },
+];
+
+export const achievementsData = [
+  {
+    id: 1,
+    title: "LFX Mentee – The Linux Foundation",
+    description:
+      "Selected for prestigious Linux Foundation mentorship program contributing to GitMesh decentralized software infrastructure and developer tooling.",
+    badge: "International Mentorship",
+  },
+  {
+    id: 2,
+    title: "2nd Position in Student Research Symposium",
+    description:
+      "Awarded 2nd position by IEEE Xplore for innovative research and paper presentation.",
+    badge: "IEEE Xplore Award",
+  },
+  {
+    id: 3,
+    title: "Top 10 Finalist – SyncUP Hackathon",
+    description:
+      "Recognized among the top 10 finalists out of hundreds of engineering teams for high-impact software innovation.",
+    badge: "Hackathon Finalist",
+  },
+  {
+    id: 4,
+    title: "Top 20 of 300+ Teams (Top 7%)",
+    description:
+      "Ranked in top 20 of 300+ teams in the internal Smart India Hackathon competitive selection round.",
+    badge: "SIH Top 7%",
+  },
+  {
+    id: 5,
+    title: "Certified Core I & Core II LabVIEW Associate Developer",
+    description:
+      "Official National Instruments certification in LabVIEW Virtual Instruments development and hardware integration.",
+    badge: "NI Certification",
+  },
+];
+
+export const socials = [
+  {
+    name: "GitHub",
+    href: "https://github.com/AnuragGupta181",
+    label: "github.com/AnuragGupta181",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/anuragg1817",
+    label: "linkedin.com/in/anuragg1817",
+  },
+  {
+    name: "Email",
+    href: "mailto:job4anurag11@gmail.com",
+    label: "job4anurag11@gmail.com",
+  },
+  {
+    name: "Phone",
+    href: "tel:+919151491382",
+    label: "+91-9151491382",
+  },
 ];

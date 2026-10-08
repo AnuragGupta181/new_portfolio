@@ -1,96 +1,97 @@
-# 🌐 3D Awwwards-Level Developer Portfolio
+# 🌐 Anurag Gupta — Interactive 3D Portfolio
 
-### Built with React, GSAP, Three.js, TailwindCSS
+### Software Engineer • LFX Mentee @ GitMesh • AI & Cloud Infrastructure
 
-This is a fully animated, interactive, 3D developer portfolio designed to **impress clients, recruiters, and hiring managers**. It's more than a portfolio—it's a web experience built with production-level code, scroll-based animations, and real-world best practices.
+A high-performance, fully animated, 3D developer portfolio showcasing production systems, autonomous AI pipelines, cloud infrastructure, and 4 domain-tailored technical resumes.
 
-> ⚡ Inspired by Awwwards-level sites — built with React (Vite), TailwindCSS, GSAP, React Three Fiber, and Drei.
-
-<br/>
-<div>
-  <img src="https://github.com/user-attachments/assets/4eaf9399-fd02-4a90-83f7-2b5a361bc032" alt="Hero" style="border-radius: 8px;"/>
-  <div style="display: flex; justify-content: space-between; margin: 20px 0;">
-    <img src="https://github.com/user-attachments/assets/155bf742-b24f-4119-89f4-87e6d88c8f53" alt="Works" style="width: 32%; border-radius: 8px;"/>
-    <img src="https://github.com/user-attachments/assets/f22b9749-85ed-434f-a5f6-df1f8e221103" alt="ContactSummary" style="width: 32%; border-radius: 8px;"/>
-    <img src="https://github.com/user-attachments/assets/3e473322-b96a-433b-aec5-ece9bab25795" alt="Contact" style="width: 32%; border-radius: 8px;"/>
-  </div>
-</div>
-<br/>
-
-> 📺 [Watch Full YouTube Walkthrough](https://youtu.be/i0229UsdBwc)
----
-
-## 🚀 Tech Stack
-
-| Technology       | Description                             |
-| ---------------- | --------------------------------------- |
-| **React (Vite)** | Fast dev server and production bundling |
-| **Tailwind CSS** | Utility-first styling for components    |
-| **GSAP**         | Scroll-based animation and motion logic |
-| **Three.js**     | 3D scenes powered by React Three Fiber  |
-| **Drei**         | Useful helpers for 3D rendering         |
+Built with **React (Vite)**, **Three.js / React Three Fiber**, **GSAP**, and **TailwindCSS**.
 
 ---
 
-## 📁 Features
+## 👨‍💻 About Anurag Gupta
 
-- 🔥 3D Hero Section with animated planet and golden ring
-- 🧩 Smooth slide-in Navbar with staggered link animations
-- 🎯 Scroll-triggered Service Summary with horizontal word motion
-- 🖼️ Works section with hover overlays and interactive previews
-- ✍️ About section with clip-path image reveal + typewriter text
-- 🏁 Marquee-based Contact Summary and CTA
-- 💼 Fully responsive and accessible on all screen sizes
+- **Role:** Software Engineer & Open Source Contributor
+- **Mentorship:** LFX Mentee at **The Linux Foundation** (GitMesh)
+- **Education:** B.Tech in Electronics and Computing Engineering, AKGEC (CGPA: 7.2)
+- **Location:** Ghaziabad, Uttar Pradesh, India
+- **Email:** [job4anurag11@gmail.com](mailto:job4anurag11@gmail.com)
+- **GitHub:** [github.com/AnuragGupta181](https://github.com/AnuragGupta181)
+- **LinkedIn:** [linkedin.com/in/anuragg1817](https://www.linkedin.com/in/anuragg1817)
 
 ---
 
-## 📦 Setup & Installation
+## 📄 4 Tailored Resumes Hub
 
+This portfolio includes 4 specialized, downloadable PDF resumes located in `/public/resume`:
+
+1. **Software Engineer (`Anurag_Resume_SE.pdf`)** — Backend, Microservices, TypeScript, Node.js, FastAPI, PostgreSQL, Redis, Drizzle ORM.
+2. **AI & MLOps Engineer (`Anurag_Resume_AI.pdf`)** — Vision-Language Models (Qwen2.5-VL), Fine-Tuning (Unsloth, LoRA), MCP Servers, LangChain, LangGraph, RAG.
+3. **DevOps & Cloud Engineer (`Anurag_Resume-DevOps.pdf`)** — AWS (ECS, ALB, EC2, S3, WAF), Docker, GitHub Actions CI/CD, MongoDB Replica Sets, Nginx.
+4. **Electronics & Robotics (`Anurag_Resume-ECE-10sep.pdf`)** — ROS 2 Humble, PX4 Autopilot, UAV Swarms, NI LabVIEW Core I & II, ESP32 Edge AI.
+
+---
+
+## 🚀 Key Highlights & Experience
+
+- **GitMesh (The Linux Foundation) — LFX Mentee:** Engineered multi-agent AI orchestration and Model Context Protocol (MCP) servers, optimized CI/CD workflows, and boosted test coverage.
+- **Carbon Crunch — MLOps Engineering Intern:** Fine-tuned Qwen2.5-VL-7B-Instruct cutting GPU VRAM by 45%, and engineered document OCR pipelines extracting 5,000+ files with 90%+ accuracy.
+- **Cloud Computing Cell (AKGEC) — ML & DevOps Lead:** Deployed AWS ECS microservices with ALB routing (CQRS pattern) and BullMQ + Redis task queues serving 500+ users with 99.9% uptime.
+- **Tifac Lab — LabVIEW Trainee:** Engineered NI MyRIO matrix keypad digital signal processing interfaces decoding with 99% accuracy.
+- **Open Source:** 12+ merged PRs across The Linux Foundation, Image Processing Tool, and community AI developer tools.
+- **Accolades:** IEEE Xplore 2nd Position in Student Research Symposium, Top 10 Finalist in SyncUP Hackathon, Top 7% in Smart India Hackathon.
+
+---
+
+## 🛠️ Flagship Projects
+
+1. **AI Image Processing Platform** — React, FastAPI, YOLO, OpenCV, Redis, AWS S3, Docker.
+2. **Generative AI & RAG Platform** — FastAPI, LangChain, LangGraph, LangSmith, AWS, Python.
+3. **Autonomous Multi-UAV Swarm System** — ROS 2 Humble, PX4 Autopilot, Gazebo SITL, SLAM, Python, C++.
+4. **Carbon Crunch Multi-Modal OCR Pipeline** — Python, FastAPI, Playwright, Qwen2.5-VL, Unsloth, LoRA, Docker.
+5. **High-Availability Cloud Assessment Platform** — AWS ECS, Docker, MongoDB Replica Set, Redis, BullMQ, Nginx.
+6. **Pesticide Detection Agricultural Robot** — ESP32, ESP32-CAM, YOLOv12, OpenCV, L298N, IoT 4.0.
+
+---
+
+## 💻 Tech Stack
+
+| Domain | Technologies |
+| --- | --- |
+| **Frontend & 3D** | React 19, Vite, React Three Fiber, Drei, Three.js, GSAP, TailwindCSS v4, Lenis |
+| **Backend & Cloud** | FastAPI, Node.js, Express, AWS (ECS, EC2, ALB, S3), Docker, Nginx, Cloudflare |
+| **AI / ML & Robotics** | Qwen-VL, Unsloth, LoRA, LangChain, LangGraph, YOLO, OpenCV, ROS 2 Humble |
+| **Databases & Cache** | PostgreSQL, MongoDB Replica Sets, Redis, Drizzle ORM, BullMQ |
+
+---
+
+## 📦 Setup & Running Locally
+
+### Using Bun:
 ```bash
-git clone https://github.com/Ali-Sanati/awwwards-portfolio.git
-cd awwwards-portfolio
-npm install
-npm run dev
+# Clone the repository
+git clone https://github.com/AnuragGupta181/new_portfolio.git
+cd new_portfolio
+
+# Install dependencies
+bun install
+
+# Start development server
+bun dev
 ```
 
-> Open http://localhost:5173 in your browser.
+### Production Build:
+```bash
+bun run build
+bun run preview
+```
+
+> Opens at `http://localhost:5173` (or preview at `http://localhost:4173`).
 
 ---
 
-## 🛠️ Customization Tips
+## 📬 Contact & Connect
 
-- Change text, images, and links in /constants/index.js
-
-- Update 3D models and scene in Hero.jsx
-
-- Add your own contact info in Contact.jsx
-
-- Adjust colors, fonts, and layout via tailwind.config.js
-
----
-
-## 🔗 Assets
-
-Assets used in the project can be found [here](https://github.com/user-attachments/files/19820923/public.zip)
-
----
-
-## 📣 Like the project?
-
-If this helped you build or inspire your own site:
-
-- ⭐ Star this repo
-
-- 📺 [Watch the full walkthrough on YouTube](https://youtu.be/i0229UsdBwc)
-
-- 📬 [Connect on LinkedIn](https://www.linkedin.com/in/ali-sanati)
-
-- 📷 [Follow me on Instagram](https://www.instagram.com/ali.sanatidev/reels/)
-
----
-
-## 🤝 Let’s Build Together
-
-Drop a comment on the video or open an issue with your idea!
-
-> 📩 Like, subscribe, and let me know what kind of project you want to build together!
+- 📧 Email: [job4anurag11@gmail.com](mailto:job4anurag11@gmail.com)
+- 📱 Phone: [+91-9151491382](tel:+919151491382)
+- 💼 LinkedIn: [linkedin.com/in/anuragg1817](https://www.linkedin.com/in/anuragg1817)
+- 🐙 GitHub: [github.com/AnuragGupta181](https://github.com/AnuragGupta181)

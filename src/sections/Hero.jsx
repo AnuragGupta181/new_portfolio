@@ -3,19 +3,24 @@ import { Planet } from "../components/Planet";
 import { Environment, Float, Lightformer } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
+import { personalInfo } from "../constants";
+
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
-  const text = `I help growing brands and startups gain an
-unfair advantage through premium
-results driven webs/apps`;
+  const text = `Engineering high-concurrency microservices,
+scalable cloud infrastructure & autonomous AI pipelines
+from prototype to production.`;
+
   return (
-    <section id="home" className="flex flex-col justify-end min-h-screen">
+    <section id="home" className="relative flex flex-col justify-end min-h-screen">
       <AnimatedHeaderSection
-        subTitle={"404 No Bugs Found"}
-        title={"Ali Sanati"}
+        subTitle={"Software Engineer • LFX Mentee • AI & Cloud"}
+        title={personalInfo.name}
         text={text}
         textColor={"text-black"}
       />
+
+      {/* Floating 3D Planet */}
       <figure
         className="absolute inset-0 -z-50"
         style={{ width: "100vw", height: "100vh" }}
@@ -58,6 +63,22 @@ results driven webs/apps`;
           </Environment>
         </Canvas>
       </figure>
+
+      {/* Bottom Status Ribbon */}
+      <div className="flex flex-wrap items-center justify-between gap-4 px-10 py-6 border-t border-black/10 text-xs uppercase tracking-widest text-black/70">
+        <div className="flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+          <span className="w-2 h-2 -ml-3 rounded-full bg-emerald-600"></span>
+          <span>Open to Software Engineering & AI/Cloud Roles</span>
+        </div>
+        <div className="flex flex-wrap items-center gap-6">
+          <span>LFX Mentee @ GitMesh</span>
+          <span className="hidden sm:inline">•</span>
+          <span className="hidden sm:inline">12+ Merged PRs</span>
+          <span className="hidden sm:inline">•</span>
+          <span className="hidden sm:inline">4 Target Resumes</span>
+        </div>
+      </div>
     </section>
   );
 };
