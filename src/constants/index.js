@@ -346,6 +346,7 @@ export const projects = [
     description:
       "Enterprise assessment platform engineered for 500+ concurrent users with 99.9% uptime on AWS Free Tier ($50 total cost). Path-based ALB routing for CQRS microservices on ECS, MongoDB multi-node replica set with automated failover, BullMQ/Redis asynchronous task queues, and automated CI/CD.",
     href: "https://github.com/AnuragGupta181/Coding-Plateform",
+    liveUrl: "https://coding-plateform-egyb.vercel.app/",
     image: "/assets/projects/nextgen-coding-platform.png",
     bgImage: "/assets/backgrounds/poster.jpg",
     frameworks: [

@@ -2,6 +2,8 @@
 
 ### Software Engineer • LFX Mentee @ GitMesh • AI & Cloud Infrastructure
 
+> 🚀 **Live Portfolio:** [anurag-gupta-learning.vercel.app](https://anurag-gupta-learning.vercel.app/)
+
 A high-performance, fully animated, 3D developer portfolio showcasing production systems, autonomous AI pipelines, cloud infrastructure, and 4 domain-tailored technical resumes.
 
 Built with **React (Vite)**, **Three.js / React Three Fiber**, **GSAP**, and **TailwindCSS**.
@@ -44,11 +46,11 @@ This portfolio includes 4 specialized, downloadable PDF resumes located in `/pub
 
 ## 🛠️ Flagship Projects
 
-1. **[FotoFix – AI Image Processing Platform](https://github.com/AnuragGupta181/phot-fix-ml-fast)** — React, FastAPI, YOLO, OpenCV, Redis, AWS S3, Docker.
+1. **[FotoFix – AI Image Processing Platform](https://github.com/AnuragGupta181/phot-fix-ml-fast)** • **[Live Demo](https://image-processing-tool-c7k8.vercel.app)** — React, FastAPI, YOLO, OpenCV, Redis, AWS S3, Docker.
 2. **[Generative AI & RAG Platform](https://github.com/AnuragGupta181/ccc-ragbot)** — FastAPI, LangChain, LangGraph, LangSmith, AWS, Python.
 3. **[Autonomous Multi-UAV Swarm System](https://github.com/AnuragGupta181/drone-mine-detection)** — ROS 2 Humble, PX4 Autopilot, Gazebo SITL, SLAM, Python, C++.
 4. **[Carbon Crunch Multi-Modal OCR Pipeline](https://github.com/AnuragGupta181/ocr)** — Python, FastAPI, Playwright, Qwen2.5-VL, Unsloth, LoRA, Docker.
-5. **[NextGen – Cloud Assessment & Contest Platform](https://github.com/AnuragGupta181/Coding-Plateform)** — AWS ECS, Docker, MongoDB Replica Set, Redis, BullMQ, Nginx.
+5. **[NextGen – Cloud Assessment & Contest Platform](https://github.com/AnuragGupta181/Coding-Plateform)** • **[Live Demo](https://coding-plateform-egyb.vercel.app/)** — AWS ECS, Docker, MongoDB Replica Set, Redis, BullMQ, Nginx.
 6. **[Pesticide Detection Agricultural Robot](https://github.com/AnuragGupta181/Pestiside-detection)** — ESP32, ESP32-CAM, YOLOv12, OpenCV, L298N, IoT 4.0.
 
 ---

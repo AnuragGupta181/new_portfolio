@@ -148,14 +148,29 @@ and cloud-native microservices.`;
                   </p>
                 )}
               </div>
-              <div className="flex items-center gap-2 mt-2 md:mt-0">
-                <span className="text-xs tracking-wider uppercase opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 hidden md:inline">
-                  View Code
-                </span>
-                <Icon
-                  icon="lucide:arrow-up-right"
-                  className="md:size-6 size-5 transition-transform duration-300 md:group-hover:translate-x-1 md:group-hover:-translate-y-1"
-                />
+              <div className="flex items-center gap-3 mt-3 md:mt-0">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#cfa355] text-black hover:bg-[#dfb365] transition-all duration-300 shadow-sm z-10"
+                    title="Open Live Demo"
+                  >
+                    <Icon icon="lucide:external-link" className="size-3.5" />
+                    <span>Live Demo</span>
+                  </a>
+                )}
+                <div className="flex items-center gap-1.5 text-black md:group-hover:text-white transition-colors duration-300">
+                  <span className="text-xs tracking-wider uppercase opacity-80 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                    View Code
+                  </span>
+                  <Icon
+                    icon="lucide:arrow-up-right"
+                    className="md:size-6 size-5 transition-transform duration-300 md:group-hover:translate-x-1 md:group-hover:-translate-y-1"
+                  />
+                </div>
               </div>
             </div>
 
