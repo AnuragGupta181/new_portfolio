@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useGSAP } from "@gsap/react";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 import Marquee from "../components/Marquee";
@@ -6,6 +7,8 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import gsap from "gsap";
 
 const Contact = () => {
+  const [booking, setBooking] = useState(bookingOptions[1].id);
+  const activeBooking = bookingOptions.find((o) => o.id === booking);
   const text = `Have an opportunity, collaboration, or engineering challenge?
 I’d love to connect and discuss how I can add immediate value!`;
 
@@ -50,24 +53,42 @@ I’d love to connect and discuss how I can add immediate value!`;
             <div className="social-link">
               <h2 className="flex items-center gap-3"><img src="/icons/calendar.png" alt="" aria-hidden="true" width={32} height={32} className="size-7 md:size-8" />Book a Meeting</h2>
               <div className="w-full h-px my-2 bg-white/30" />
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 normal-case">
+              <div className="flex flex-wrap items-center gap-2 mb-4 normal-case">
                 {bookingOptions.map((option) => (
-                  <a
+                  <button
                     key={option.id}
-                    href={option.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-4 rounded-xl bg-gold text-black hover:bg-white transition-colors flex flex-col gap-1 group"
+                    type="button"
+                    onClick={() => setBooking(option.id)}
+                    className={`px-4 py-2 rounded-full text-sm tracking-wide border transition-colors cursor-pointer ${
+                      booking === option.id
+                        ? "bg-gold text-black border-gold"
+                        : "bg-white/5 text-white/70 border-white/15 hover:border-gold hover:text-white"
+                    }`}
                   >
-                    <span className="flex items-center justify-between text-base md:text-lg font-medium">
-                      {option.title}
-                      <Icon icon="lucide:calendar-check" className="size-5" />
-                    </span>
-                    <span className="text-xs md:text-sm tracking-wide opacity-70">
-                      {option.description}
-                    </span>
-                  </a>
+                    {option.title}
+                  </button>
                 ))}
+                <a
+                  href={activeBooking.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-auto text-xs tracking-wider underline text-white/60 hover:text-gold"
+                >
+                  Open in Cal.com
+                </a>
+              </div>
+              <p className="mb-3 text-sm normal-case text-white/60">
+                {activeBooking.description} Pick a day and time below.
+              </p>
+              <div className="overflow-hidden rounded-2xl bg-white border border-white/10 normal-case">
+                <iframe
+                  key={activeBooking.id}
+                  title={`Book a ${activeBooking.title} with Anurag Gupta`}
+                  src={`${activeBooking.href}?embed=true&layout=month_view&theme=light`}
+                  loading="lazy"
+                  className="block w-full h-[680px] md:h-[620px]"
+                  allow="payment"
+                />
               </div>
               <p className="mt-3 text-xs tracking-wider normal-case text-white/50">
                 Or see all my links on{" "}

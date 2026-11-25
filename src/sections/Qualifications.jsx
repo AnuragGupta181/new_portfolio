@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 import {
   achievementsData,
@@ -9,7 +9,16 @@ import {
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 const Qualifications = () => {
-  const [activeTab, setActiveTab] = useState("resumes"); // resumes | skills | education | achievements
+  const [activeTab, setActiveTab] = useState("skills"); // skills | education | achievements | resumes
+  const carouselRef = useRef(null);
+
+  const scrollCarousel = (dir) => {
+    const el = carouselRef.current;
+    if (!el) return;
+    const card = el.querySelector("[data-card]");
+    const step = card ? card.getBoundingClientRect().width + 24 : el.clientWidth;
+    el.scrollBy({ left: dir * step, behavior: "smooth" });
+  };
 
   const text = `Academic rigor in Electronics & Computing,
 recognized engineering accolades,
@@ -32,10 +41,10 @@ and 5 domain-tailored technical resumes.`;
         {/* Navigation Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-2 p-1.5 rounded-full bg-white/5 border border-white/10 w-fit mx-auto">
           {[
-            { id: "resumes", icon: "/icons/resume.png", label: "5 Resumes Hub", count: "5" },
             { id: "skills", icon: "/icons/lightning.png", label: "Skills Matrix", count: "8 Categories" },
             { id: "education", icon: "/icons/graduation.png", label: "Education", count: "AKGEC" },
             { id: "achievements", icon: "/icons/trophy.png", label: "Honors & Awards", count: "5" },
+            { id: "resumes", icon: "/icons/resume.png", label: "5 Resumes Hub", count: "5" },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -77,11 +86,19 @@ and 5 domain-tailored technical resumes.`;
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="relative">
+              <div
+                ref={carouselRef}
+                className="flex gap-6 pb-4 overflow-x-auto snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                role="region"
+                aria-label="Resume carousel"
+                tabIndex={0}
+              >
               {resumes.map((resume) => (
                 <div
                   key={resume.id}
-                  className="p-8 rounded-3xl bg-white/5 border border-white/15 hover:border-gold/50 transition-all duration-300 flex flex-col justify-between group hover:bg-white/[0.08] shadow-lg opacity-100"
+                  data-card
+                  className="snap-start shrink-0 basis-[88%] sm:basis-[calc(50%-12px)] lg:basis-[calc(33.333%-16px)] p-8 rounded-3xl bg-white/5 border border-white/15 hover:border-gold/50 transition-all duration-300 flex flex-col justify-between group hover:bg-white/[0.08] shadow-lg opacity-100"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
@@ -125,6 +142,28 @@ and 5 domain-tailored technical resumes.`;
                   </div>
                 </div>
               ))}
+              </div>
+              <div className="flex items-center justify-center gap-4 mt-4">
+                <button
+                  type="button"
+                  aria-label="Previous resume"
+                  onClick={() => scrollCarousel(-1)}
+                  className="flex items-center justify-center rounded-full size-11 bg-white/10 border border-white/15 hover:bg-gold hover:text-black transition-colors cursor-pointer"
+                >
+                  <Icon icon="lucide:chevron-left" className="size-5" />
+                </button>
+                <span className="text-xs tracking-widest uppercase text-white/50">
+                  Swipe or use arrows
+                </span>
+                <button
+                  type="button"
+                  aria-label="Next resume"
+                  onClick={() => scrollCarousel(1)}
+                  className="flex items-center justify-center rounded-full size-11 bg-white/10 border border-white/15 hover:bg-gold hover:text-black transition-colors cursor-pointer"
+                >
+                  <Icon icon="lucide:chevron-right" className="size-5" />
+                </button>
+              </div>
             </div>
           </div>
         )}
