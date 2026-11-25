@@ -97,6 +97,17 @@
 
   --animate-marquee: marquee 40s infinite linear;
   --animate-fade-in: fade-in 0.8s ease-out;
+  --animate-stage: stage-in 0.55s cubic-bezier(0.2, 0, 0, 1);
+  @keyframes stage-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
   @keyframes fade-in {
     from {
       opacity: 0;
@@ -183,4 +194,10 @@ html,
 body {
   max-width: 100%;
   overflow-x: clip;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-stage {
+    animation: none;
+  }
 }

@@ -33,6 +33,8 @@ and keep observable.`;
   const wrapRef = useRef(null);
   const canvasRef = useRef(null);
   const [active, setActive] = useState(6);
+  const [vertical, setVertical] = useState(false);
+  const verticalRef = useRef(false);
   const [playing, setPlaying] = useState(true);
   const activeRef = useRef(active);
   activeRef.current = active;
@@ -79,7 +81,12 @@ and keep observable.`;
     const size = () => {
       const rect = wrap.getBoundingClientRect();
       W = Math.round(rect.width);
-      H = Math.round(W * 0.5);
+      const v = W < 640;
+      verticalRef.current = v;
+      setVertical(v);
+      // wide: a 2:1 infinity sign; narrow (phones): stand it upright so each
+      // lobe is big enough to hold the stage text
+      H = Math.round(W * (v ? 2 : 0.5));
       if (!W) return;
       dpr = Math.min(window.devicePixelRatio || 1, 1.5);
       canvas.width = W * dpr;
@@ -102,7 +109,8 @@ and keep observable.`;
       const tHi = stageT(hi - 0.0);
 
       ctx.clearRect(0, 0, W, H);
-      const sc = W * 0.46;
+      const v = verticalRef.current;
+      const sc = v ? H * 0.46 : W * 0.46;
       const cx = W / 2;
       const cy = H / 2;
       const scatter = W * 0.012;
@@ -119,8 +127,9 @@ and keep observable.`;
         const len = Math.hypot(nx, ny) || 1;
         nx /= len;
         ny /= len;
-        const px = cx + x * sc + nx * p.o * scatter;
-        const py = cy - y * sc - ny * p.o * scatter;
+        // upright layout: Dev lobe on top, Ops lobe below
+        const px = v ? cx + y * sc + ny * p.o * scatter : cx + x * sc + nx * p.o * scatter;
+        const py = v ? cy + x * sc + nx * p.o * scatter : cy - y * sc - ny * p.o * scatter;
 
         const near = 1 - Math.min(1, angDist(p.t, tHi) / 0.55);
         const left = Math.cos(p.t) < 0; // dev lobe
@@ -195,42 +204,100 @@ and keep observable.`;
       />
 
       <div className="px-3 md:px-10 mt-8 md:mt-12 max-w-6xl mx-auto">
-        {/* Loop */}
-        <div ref={wrapRef} className="relative w-full" aria-hidden="true">
-          <canvas ref={canvasRef} className="block w-full" />
-          {/* stage labels around the loop (tablet and up) */}
+        {/* Loop with the active stage written inside its lobe */}
+        <div ref={wrapRef} className="relative w-full max-w-[420px] md:max-w-none mx-auto">
+          <canvas ref={canvasRef} className="block w-full" aria-hidden="true" />
+
+          {/* stage names around the loop */}
           {devopsStages.map((s, i) => {
             const { x, y } = curve(stageT(i));
-            const left = 50 + x * 46;
-            const top = 50 - y * 92; // canvas is W wide x W/2 tall, curve scale 0.46W
-            const above = y >= 0;
+            let left;
+            let top;
+            let shift;
+            if (vertical) {
+              // canvas is W x 2W and the curve scale is 0.92W
+              left = 50 + y * 92;
+              top = 50 + x * 46;
+              shift = y >= 0 ? "translate(14%, -50%)" : "translate(-114%, -50%)";
+            } else {
+              left = 50 + x * 46;
+              top = 50 - y * 92;
+              shift = y >= 0 ? "translate(-50%, -190%)" : "translate(-50%, 90%)";
+            }
             return (
               <span
                 key={s.id}
-                className={`hidden md:block absolute -translate-x-1/2 text-[11px] tracking-[0.25em] uppercase transition-colors duration-300 ${
-                  i === active ? "text-gold" : "text-white/40"
+                aria-hidden="true"
+                className={`absolute text-[10px] md:text-[11px] tracking-[0.2em] uppercase transition-colors duration-500 ${
+                  i === active ? "text-gold" : "text-white/35"
                 }`}
-                style={{
-                  left: `${left}%`,
-                  top: `${top}%`,
-                  transform: `translate(-50%, ${above ? "-190%" : "90%"})`,
-                }}
+                style={{ left: `${left}%`, top: `${top}%`, transform: shift }}
               >
                 {s.name}
               </span>
             );
           })}
-          <span className="absolute left-[24%] top-1/2 -translate-x-1/2 -translate-y-1/2 text-xs tracking-[0.4em] text-white/30">
+
+          {/* active stage, centred in its lobe, cross-fading on change */}
+          <div
+            className="absolute pointer-events-none"
+            style={
+              vertical
+                ? {
+                    left: "50%",
+                    top: `${50 + (stage.lobe === "Dev" ? -1 : 1) * 23}%`,
+                    width: "56%",
+                    transform: "translate(-50%, -50%)",
+                  }
+                : {
+                    left: `${50 + (stage.lobe === "Dev" ? -1 : 1) * 23}%`,
+                    top: "50%",
+                    width: "40%",
+                    maxWidth: 380,
+                    transform: "translate(-50%, -50%)",
+                  }
+            }
+          >
+            <div
+              key={stage.id}
+              className="text-center animate-stage"
+              role="status"
+              aria-live="polite"
+            >
+              <p className="text-[10px] md:text-xs tracking-widest uppercase text-white/45">
+                {String(active + 1).padStart(2, "0")} / {String(N).padStart(2, "0")} ·{" "}
+                {stage.lobe}
+              </p>
+              <h3 className="mt-1 text-2xl md:text-4xl font-normal text-gold">
+                {stage.name}
+              </h3>
+              <p className="mt-1.5 text-[11px] leading-snug md:text-base md:leading-normal text-white/70 font-light">
+                {stage.summary}
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-1 md:gap-1.5 mt-2 md:mt-3">
+                {stage.tools.map((tool) => (
+                  <span
+                    key={tool}
+                    className="px-1.5 py-0.5 md:px-2.5 md:py-1 text-[9px] md:text-[11px] uppercase tracking-wide rounded-md bg-gold/10 border border-gold/25 text-gold/90"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <span className="absolute left-1/2 text-[10px] tracking-[0.4em] text-white/20 -translate-x-1/2 top-[2%] md:hidden">
             DEV
           </span>
-          <span className="absolute left-[76%] top-1/2 -translate-x-1/2 -translate-y-1/2 text-xs tracking-[0.4em] text-white/30">
+          <span className="absolute left-1/2 text-[10px] tracking-[0.4em] text-white/20 -translate-x-1/2 bottom-[2%] md:hidden">
             OPS
           </span>
         </div>
 
         {/* Stage selector */}
         <div
-          className="flex flex-wrap items-center justify-center gap-2 mt-6"
+          className="flex flex-wrap items-center justify-center gap-2 mt-4 md:mt-6"
           role="tablist"
           aria-label="Delivery stages"
         >
@@ -241,7 +308,7 @@ and keep observable.`;
               role="tab"
               aria-selected={i === active}
               onClick={() => select(i)}
-              className={`px-4 py-2 min-h-11 rounded-full text-xs uppercase tracking-wider border transition-colors cursor-pointer ${
+              className={`px-3 md:px-4 py-2 min-h-11 rounded-full text-xs uppercase tracking-wider border transition-colors cursor-pointer ${
                 i === active
                   ? "bg-gold text-black border-gold"
                   : "bg-transparent text-white/70 border-white/20 hover:border-gold hover:text-white"
@@ -260,37 +327,16 @@ and keep observable.`;
           </button>
         </div>
 
-        {/* Active stage */}
-        <div
-          className="mt-6 p-5 md:p-8 rounded-3xl bg-white/5 border border-white/10"
-          role="tabpanel"
-          aria-live="polite"
+        {/* What I actually did at this stage */}
+        <p
+          key={`did-${stage.id}`}
+          className="mt-5 max-w-3xl mx-auto text-center text-sm md:text-base text-white/80 font-light animate-stage"
         >
-          <p className="text-xs tracking-widest uppercase text-white/50">
-            {String(active + 1).padStart(2, "0")} / {String(N).padStart(2, "0")} ·{" "}
-            {stage.lobe}
-          </p>
-          <h3 className="mt-2 text-3xl md:text-4xl font-normal text-gold">{stage.name}</h3>
-          <p className="mt-2 text-base md:text-lg text-white/70 font-light">
-            {stage.summary}
-          </p>
-          <div className="flex flex-wrap gap-2 mt-4">
-            {stage.tools.map((tool) => (
-              <span
-                key={tool}
-                className="px-3 py-1 text-xs uppercase tracking-wider rounded-lg bg-white/10 border border-white/10 text-white/80"
-              >
-                {tool}
-              </span>
-            ))}
-          </div>
-          <p className="mt-5 pt-4 text-sm md:text-base text-white/80 font-light border-t border-white/10">
-            <span className="mr-2 text-xs tracking-widest uppercase text-gold">
-              What I did
-            </span>
-            {stage.did}
-          </p>
-        </div>
+          <span className="mr-2 text-xs tracking-widest uppercase text-gold">
+            What I did
+          </span>
+          {stage.did}
+        </p>
       </div>
     </section>
   );

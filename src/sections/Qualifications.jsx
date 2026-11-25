@@ -7,7 +7,7 @@ import {
   skillsData,
 } from "../constants";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import SkillArena from "../components/SkillArena";
+import SkillMatrix from "../components/SkillMatrix";
 
 const Qualifications = () => {
   const [activeTab, setActiveTab] = useState("skills"); // skills | education | achievements | resumes
@@ -171,22 +171,7 @@ and 5 domain-tailored technical resumes.`;
 
         {/* TAB 2: Skills Matrix */}
         {activeTab === "skills" && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-6 opacity-100 transition-opacity duration-300">
-            {skillsData.categories.map((category, idx) => (
-              <div
-                key={idx}
-                className="p-4 md:p-6 rounded-3xl bg-white/5 border border-white/10 flex flex-col shadow-lg"
-              >
-                <div className="flex items-center gap-3 mb-4 pb-3 border-b border-white/10">
-                  <div className="w-2 h-2 rounded-full bg-gold" />
-                  <h4 className="text-lg font-medium text-white">
-                    {category.name}
-                  </h4>
-                </div>
-                <SkillArena skills={category.skills} />
-              </div>
-            ))}
-          </div>
+          <SkillMatrix categories={skillsData.categories} />
         )}
 
         {/* TAB 3: Education */}

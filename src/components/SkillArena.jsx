@@ -61,8 +61,8 @@ const SkillArena = ({ skills }) => {
     const measure = () => {
       W = arena.clientWidth;
       // enough room for every bubble to float: area-based height
-      const area = state.reduce((a, s) => a + Math.PI * s.r * s.r, 0) * 2.6;
-      const h = Math.round(Math.min(560, Math.max(250, area / Math.max(W, 1))));
+      const area = state.reduce((a, s) => a + Math.PI * s.r * s.r, 0) * 2.05;
+      const h = Math.round(Math.min(560, Math.max(210, area / Math.max(W, 1))));
       H = h;
       setHeight(h);
       if (!placed) place();
