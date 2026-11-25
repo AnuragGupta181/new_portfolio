@@ -266,25 +266,42 @@ and research laboratories.`;
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {openSourceData.contributions.map((contrib, cIdx) => (
-              <div
-                key={cIdx}
-                className="p-4 md:p-6 rounded-2xl bg-black/5 hover:bg-black/10 transition-colors border border-black/5 flex flex-col justify-between"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {openSourceData.contributions.map((contrib) => (
+              <a
+                key={contrib.repo}
+                href={contrib.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 md:p-6 rounded-2xl bg-black/5 hover:bg-black/10 transition-colors border border-black/5 flex flex-col gap-3 group"
               >
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs uppercase tracking-wider px-2.5 py-1 rounded-full bg-black text-white font-medium">
-                      {contrib.prs}
-                    </span>
-                    <Icon icon="lucide:github" className="size-5 text-black/60" />
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <h4 className="text-lg md:text-xl font-medium group-hover:text-black">
+                      {contrib.repo}
+                    </h4>
+                    <p className="text-xs tracking-wider uppercase text-black/50 mt-0.5">
+                      {contrib.org}
+                    </p>
                   </div>
-                  <h4 className="text-lg font-medium mb-2">{contrib.repo}</h4>
-                  <p className="text-black/70 text-sm font-light leading-relaxed">
-                    {contrib.summary}
-                  </p>
+                  <Icon
+                    icon="lucide:arrow-up-right"
+                    className="size-5 shrink-0 text-black/40 group-hover:text-black transition-colors"
+                  />
                 </div>
-              </div>
+                <span className="self-start text-[11px] uppercase tracking-wider px-2.5 py-1 rounded-full bg-black text-white font-medium">
+                  {contrib.tag}
+                </span>
+                <p className="text-sm text-black/70 font-light">{contrib.about}</p>
+                <ul className="space-y-1.5 text-sm text-black/70 font-light leading-relaxed">
+                  {contrib.points.map((pt) => (
+                    <li key={pt} className="flex gap-2">
+                      <span className="mt-2 size-1.5 rounded-full bg-gold shrink-0" />
+                      <span>{pt}</span>
+                    </li>
+                  ))}
+                </ul>
+              </a>
             ))}
           </div>
         </div>

@@ -82,7 +82,7 @@ from prototype to production.`;
             rel="noopener noreferrer"
             className="hidden sm:inline hover:text-black underline-offset-4 hover:underline"
           >
-            12+ Merged PRs
+            25+ Merged PRs
           </a>
           <span className="hidden sm:inline">•</span>
           <span className="hidden sm:inline">5 Target Resumes</span>

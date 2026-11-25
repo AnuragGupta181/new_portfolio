@@ -16,7 +16,7 @@ export const personalInfo = {
   cal: "https://cal.com/anurag-gupta-11",
   stats: [
     { label: "Hands-on Experience", value: "1+ Yrs" },
-    { label: "Merged Open Source PRs", value: "12+" },
+    { label: "Merged Open Source PRs", value: "25+" },
     { label: "Concurrent Users Served", value: "250+" },
     { label: "Specialized Resumes", value: "5 Roles" },
   ],
@@ -264,30 +264,59 @@ export const experienceData = [
 ];
 
 export const openSourceData = {
-  totalPRs: "12+ Merged PRs",
+  totalPRs: "25+ Merged PRs",
   prsUrl:
     "https://github.com/search?q=is%3Apr+is%3Amerged+author%3AAnuraggupta181&type=pullrequests&p=2",
   contributions: [
     {
-      repo: "GitMesh (The Linux Foundation)",
-      prs: "5 Merged PRs",
-      summary:
-        "Engineered GitHub Copilot and Cursor adapter detection routines, automated CI workflows via GitHub Actions, boosted UI route test coverage by 30%, and slashed Docker setup times by 25%.",
-      link: "https://github.com/AnuragGupta181/gitmesh",
+      repo: "GitMesh",
+      org: "The Linux Foundation · LFX mentee",
+      tag: "Policy-as-code for AI agents",
+      about: "Policy-as-code engine for open-source AI agent orchestration.",
+      link: "https://github.com/LF-Decentralized-Trust-labs/gitmesh",
+      points: [
+        "Cursor and GitHub Copilot adapter detection for workspace adapters (#458, #459).",
+        "GitHub Actions CI workflow and better UI route test coverage with a stable typecheck flow (#403, #399).",
+        "Improved Docker quickstart docs and troubleshooting (#385).",
+        "Fixing inbound webhook routing in forge-sync (#433, open).",
+        "Scoped roadmap issues: OPA policy engine, tamper-evident audit log, maintainer dashboard, doctor risk rules (#435, #436, #437, #463).",
+      ],
     },
     {
-      repo: "Image Processing Tool",
-      prs: "3 Merged PRs",
-      summary:
-        "Integrated high-throughput ML model inference APIs, cutting response latency by 35% across processing pipelines.",
-      link: "https://github.com/AnuragGupta181/phot-fix-ml-fast",
+      repo: "LabVIEW MCP",
+      org: "Zuehlke",
+      tag: "Fix merged upstream",
+      about: "MCP server that connects AI agents to LabVIEW.",
+      link: "https://github.com/Zuehlke/labview-mcp",
+      points: [
+        "Found and fixed Error 1125 on LabVIEW 2019: the pylabview composer only restamped VI versions for 2020 and later (issue #149).",
+        "Verified on LabVIEW 2019 itself: plain VIs, subVI calls, case structures, loops and Formula Nodes load, run and save.",
+        "Fix merged upstream with my commit cherry-picked (PR #150), because the repo only takes PRs from collaborators.",
+      ],
     },
     {
-      repo: "Kryptonite & Community Tools",
-      prs: "4 Merged PRs",
-      summary:
-        "Integrated AI chatbot endpoints serving 500+ daily requests, implemented OAuth authentication, and stabilized user login pipelines.",
-      link: "https://github.com/AnuragGupta181/kryptonite_anu",
+      repo: "Harbor Satellite",
+      org: "CNCF",
+      tag: "In progress",
+      about: "Container registry for edge and disconnected sites.",
+      link: "https://github.com/container-registry/harbor-satellite",
+      points: [
+        "Fixing broken Markdown links (404s) with a Hugo link render hook, and adding a right-sidebar table of contents to the docs site (#607, open).",
+        "Reported missing unit tests for robot-secret refresh and scheduler shutdown races (#626).",
+      ],
+    },
+    {
+      repo: "Community projects",
+      org: "Open source",
+      tag: "Merged PRs",
+      about: "Product work on community-run apps.",
+      link: "https://github.com/AnuragGupta181",
+      points: [
+        "CityVoice: client dashboard and responsive UI (6 merged PRs).",
+        "Kryptonite: AI chatbot API.",
+        "FotoFix: ML model inference APIs (3 merged PRs).",
+        "NextGen: CI/CD workflow to EC2 (7 merged PRs).",
+      ],
     },
   ],
 };
@@ -702,6 +731,11 @@ export const socials = [
     label: "linkedin.com/in/anuragg1817",
   },
   {
+    name: "X",
+    href: "https://x.com/AnuragGupt1817",
+    label: "x.com/AnuragGupt1817",
+  },
+  {
     name: "Linktree",
     href: "https://linktr.ee/anuraggupta11",
     label: "linktr.ee/anuraggupta11",
@@ -740,7 +774,7 @@ export const devopsStages = [
     lobe: "Dev",
     summary: "Typed, reviewed services and AI pipelines.",
     tools: ["TypeScript", "Python", "FastAPI", "Node.js", "React"],
-    did: "12+ merged PRs across GitMesh, Image Processing Tool and Kryptonite.",
+    did: "25+ merged PRs across GitMesh, LabVIEW MCP and community projects.",
   },
   {
     id: "build",

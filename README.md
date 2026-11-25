@@ -40,7 +40,7 @@ This portfolio includes 5 specialized, downloadable PDF resumes located in `/pub
 - **Carbon Crunch — MLOps Engineering Intern:** Fine-tuned Qwen2.5-VL-7B-Instruct cutting GPU VRAM by 45%, and engineered document OCR pipelines extracting 5,000+ files at 86% accuracy.
 - **Cloud Computing Cell (AKGEC) — ML & DevOps Lead:** Deployed AWS ECS microservices with ALB routing (CQRS pattern) and BullMQ + Redis task queues serving 250+ concurrent users at ~$50 infrastructure cost.
 - **Tifac Lab — LabVIEW Trainee:** Engineered NI MyRIO matrix keypad digital signal processing interfaces decoding with 99% accuracy.
-- **Open Source:** 12+ merged PRs across The Linux Foundation, Image Processing Tool, and community AI developer tools.
+- **Open Source:** 25+ merged PRs across GitMesh (The Linux Foundation), LabVIEW MCP, Harbor Satellite, and community projects.
 - **Accolades:** IEEE Xplore 2nd Position in Student Research Symposium, Top 10 Finalist in SyncUP Hackathon, Top 7% in Smart India Hackathon.
 
 ---
