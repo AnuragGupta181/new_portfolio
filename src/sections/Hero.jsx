@@ -69,8 +69,8 @@ from prototype to production.`;
       {/* Bottom Status Ribbon */}
       <div className="flex flex-wrap items-center justify-between gap-4 px-10 py-6 border-t border-black/10 text-xs uppercase tracking-widest text-black/70">
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-          <span className="w-2 h-2 -ml-3 rounded-full bg-emerald-600"></span>
+          <span className="w-2 h-2 rounded-full bg-gold animate-ping"></span>
+          <span className="w-2 h-2 -ml-3 rounded-full bg-gold"></span>
           <span>Open to Software Engineering & AI/Cloud Roles</span>
         </div>
         <div className="flex flex-wrap items-center gap-6">

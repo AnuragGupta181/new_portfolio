@@ -80,11 +80,11 @@ I’d love to connect and discuss how I can add immediate value!`;
               <p className="mb-3 text-sm normal-case text-white/60">
                 {activeBooking.description} Pick a day and time below.
               </p>
-              <div className="overflow-hidden rounded-2xl bg-white border border-white/10 normal-case">
+              <div className="overflow-hidden rounded-2xl bg-[#111] border border-white/15 normal-case">
                 <iframe
                   key={activeBooking.id}
                   title={`Book a ${activeBooking.title} with Anurag Gupta`}
-                  src={`${activeBooking.href}?embed=true&layout=month_view&theme=light`}
+                  src={`${activeBooking.href}?embed=true&layout=month_view&theme=dark`}
                   loading="lazy"
                   className="block w-full h-[680px] md:h-[620px]"
                   allow="payment"
