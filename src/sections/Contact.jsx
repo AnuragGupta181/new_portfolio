@@ -47,7 +47,7 @@ I’d love to connect and discuss how I can add immediate value!`;
           textColor={"text-white"}
           withScrollTrigger={true}
         />
-        <div className="flex px-10 font-light text-white uppercase lg:text-[32px] text-[26px] leading-none mb-12">
+        <div className="flex px-5 md:px-10 font-light text-white uppercase lg:text-[32px] text-[26px] leading-none mb-12">
           <div className="flex flex-col w-full gap-8">
             {/* Book a meeting */}
             <div className="social-link">

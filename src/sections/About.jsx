@@ -56,7 +56,7 @@ Open-Source Advocate — 12+ merged PRs across developer infrastructure, LLM end
         textColor={"text-white"}
         withScrollTrigger={true}
       />
-      <div className="flex flex-col items-center justify-between gap-16 px-10 pb-16 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-3xl text-white/60">
+      <div className="flex flex-col items-center justify-between gap-10 md:gap-16 px-5 md:px-10 pb-10 md:pb-16 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-3xl text-white/60">
         <div className="relative flex flex-col items-center w-full lg:w-auto shrink-0">
           <img
             ref={imgRef}

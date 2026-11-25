@@ -56,7 +56,7 @@ and research laboratories.`;
   const exp = experienceData[currentSlide];
 
   return (
-    <section id="experience" className="min-h-screen py-16 bg-[#e5e5e0] text-black">
+    <section id="experience" className="min-h-screen py-10 md:py-16 bg-[#e5e5e0] text-black">
       <AnimatedHeaderSection
         subTitle={"Proven Track Record • 4 Roles"}
         title={"Experience"}
@@ -65,7 +65,7 @@ and research laboratories.`;
         withScrollTrigger={true}
       />
 
-      <div className="px-6 md:px-10 mt-12 max-w-7xl mx-auto flex flex-col gap-10">
+      <div className="px-2 md:px-10 mt-8 md:mt-12 max-w-7xl mx-auto flex flex-col gap-6 md:gap-10">
         {/* Carousel Navigation Tabs / Pills */}
         <div className="flex flex-col gap-4">
           <div className="flex flex-wrap items-center justify-between gap-4">
@@ -142,7 +142,7 @@ and research laboratories.`;
           onTouchEnd={handleTouchEnd}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
-          className="relative overflow-hidden rounded-3xl bg-black text-white p-8 md:p-12 shadow-2xl border border-black/20 min-h-[500px] flex flex-col justify-between transition-all duration-500"
+          className="relative overflow-hidden rounded-3xl bg-black text-white p-5 md:p-12 shadow-2xl border border-black/20 min-h-[500px] flex flex-col justify-between transition-all duration-500"
         >
           {/* Background Ambient Glow */}
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none" />
@@ -186,7 +186,7 @@ and research laboratories.`;
             </p>
 
             {/* Highlights */}
-            <div className="space-y-3 mb-8 bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10">
+            <div className="space-y-3 mb-8 bg-white/5 p-4 md:p-8 rounded-2xl border border-white/10">
               <p className="text-xs font-semibold tracking-widest uppercase text-white/50 mb-2">
                 Key Accomplishments & Impact
               </p>
@@ -240,7 +240,7 @@ and research laboratories.`;
         </div>
 
         {/* Open Source Contributions Section */}
-        <div className="bg-white rounded-3xl p-8 md:p-10 border border-black/10 shadow-lg">
+        <div className="bg-white rounded-3xl p-5 md:p-10 border border-black/10 shadow-lg">
           <div className="flex flex-wrap items-center justify-between gap-4 border-b border-black/10 pb-6 mb-8">
             <div className="flex items-center gap-3">
               <div className="p-3 bg-black text-white rounded-2xl">
@@ -270,7 +270,7 @@ and research laboratories.`;
             {openSourceData.contributions.map((contrib, cIdx) => (
               <div
                 key={cIdx}
-                className="p-6 rounded-2xl bg-black/5 hover:bg-black/10 transition-colors border border-black/5 flex flex-col justify-between"
+                className="p-4 md:p-6 rounded-2xl bg-black/5 hover:bg-black/10 transition-colors border border-black/5 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">

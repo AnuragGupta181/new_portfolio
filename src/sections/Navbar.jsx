@@ -17,66 +17,79 @@ const Navbar = () => {
   const [showBurger, setShowBurger] = useState(true);
 
   useGSAP(() => {
-    gsap.set(navRef.current, { xPercent: 100 });
-    gsap.set([linksRef.current, contactRef.current], {
-      autoAlpha: 0,
-      x: -20,
-    });
+    // Mobile: full-screen menu drops down from the top.
+    // Desktop: half-width panel slides in from the right.
+    const mm = gsap.matchMedia();
+    mm.add(
+      { isMobile: "(max-width: 767px)", isDesktop: "(min-width: 768px)" },
+      (context) => {
+        const { isMobile } = context.conditions;
 
-    tl.current = gsap
-      .timeline({ paused: true })
-      .to(navRef.current, {
-        xPercent: 0,
-        duration: 1,
-        ease: "power3.out",
-      })
-      .to(
-        linksRef.current,
-        {
-          autoAlpha: 1,
-          x: 0,
-          stagger: 0.08,
-          duration: 0.5,
-          ease: "power2.out",
-        },
-        "<"
-      )
-      .to(
-        contactRef.current,
-        {
-          autoAlpha: 1,
-          x: 0,
-          duration: 0.5,
-          ease: "power2.out",
-        },
-        "<+0.2"
-      );
+        gsap.set(
+          navRef.current,
+          isMobile ? { yPercent: -100, xPercent: 0 } : { xPercent: 100, yPercent: 0 }
+        );
+        gsap.set([linksRef.current, contactRef.current], {
+          autoAlpha: 0,
+          x: isMobile ? 0 : -20,
+          y: isMobile ? -20 : 0,
+        });
 
-    iconTl.current = gsap
-      .timeline({ paused: true })
-      .to(topLineRef.current, {
-        rotate: 45,
-        y: 3.3,
-        duration: 0.3,
-        ease: "power2.inOut",
-      })
-      .to(
-        bottomLineRef.current,
-        {
-          rotate: -45,
-          y: -3.3,
-          duration: 0.3,
-          ease: "power2.inOut",
-        },
-        "<"
-      );
+        tl.current = gsap
+          .timeline({ paused: true })
+          .to(
+            navRef.current,
+            isMobile
+              ? { yPercent: 0, duration: 0.8, ease: "power3.out" }
+              : { xPercent: 0, duration: 1, ease: "power3.out" }
+          )
+          .to(
+            linksRef.current,
+            {
+              autoAlpha: 1,
+              x: 0,
+              y: 0,
+              stagger: 0.08,
+              duration: 0.5,
+              ease: "power2.out",
+            },
+            "<+0.1"
+          )
+          .to(
+            contactRef.current,
+            { autoAlpha: 1, x: 0, y: 0, duration: 0.5, ease: "power2.out" },
+            "<+0.2"
+          );
+
+        iconTl.current = gsap
+          .timeline({ paused: true })
+          .to(topLineRef.current, {
+            rotate: 45,
+            y: 3.3,
+            duration: 0.3,
+            ease: "power2.inOut",
+          })
+          .to(
+            bottomLineRef.current,
+            { rotate: -45, y: -3.3, duration: 0.3, ease: "power2.inOut" },
+            "<"
+          );
+
+        // Crossing the breakpoint rebuilds the timelines closed.
+        return () => setIsOpen(false);
+      }
+    );
+    return () => mm.revert();
   }, []);
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setShowBurger(currentScrollY <= lastScrollY || currentScrollY < 10);
+      // Always visible on mobile; auto-hides on scroll-down on larger screens.
+      setShowBurger(
+        window.innerWidth < 768 || currentScrollY <= lastScrollY || currentScrollY < 10
+      );
       lastScrollY = currentScrollY;
     };
     window.addEventListener("scroll", handleScroll, {
@@ -116,7 +129,7 @@ const Navbar = () => {
     <>
       <nav
         ref={navRef}
-        className="fixed z-50 flex flex-col justify-between w-full h-full px-8 md:px-12 uppercase bg-black text-white/80 py-16 gap-y-6 md:w-1/2 md:left-1/2 overflow-y-auto"
+        className="fixed top-0 left-0 z-50 flex flex-col justify-between w-full h-dvh px-6 md:px-12 uppercase bg-black text-white/80 pt-20 pb-8 md:py-16 gap-y-6 md:w-1/2 md:left-1/2 md:h-full overflow-y-auto overscroll-contain"
       >
         <div className="flex flex-col text-3xl sm:text-4xl md:text-5xl lg:text-6xl gap-y-2">
           {navSections.map((section, index) => (
@@ -191,7 +204,7 @@ const Navbar = () => {
 
       {/* Floating Burger Toggle */}
       <div
-        className="fixed z-50 flex flex-col items-center justify-center gap-1 transition-all duration-300 bg-black rounded-full cursor-pointer w-14 h-14 md:w-20 md:h-20 top-4 right-10 shadow-2xl border border-white/10"
+        className="fixed z-50 flex flex-col items-center justify-center gap-1 transition-all duration-300 bg-black rounded-full cursor-pointer w-12 h-12 md:w-20 md:h-20 top-3 right-4 md:top-4 md:right-10 shadow-2xl border border-white/10"
         onClick={toggleMenu}
         style={
           showBurger

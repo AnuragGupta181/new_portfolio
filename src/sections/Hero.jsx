@@ -67,7 +67,7 @@ from prototype to production.`;
       </figure>
 
       {/* Bottom Status Ribbon */}
-      <div className="flex flex-wrap items-center justify-between gap-4 px-10 py-6 border-t border-black/10 text-xs uppercase tracking-widest text-black/70">
+      <div className="flex flex-wrap items-center justify-between gap-4 px-5 md:px-10 py-6 border-t border-black/10 text-xs uppercase tracking-widest text-black/70">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-gold animate-ping"></span>
           <span className="w-2 h-2 -ml-3 rounded-full bg-gold"></span>

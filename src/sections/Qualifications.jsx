@@ -27,7 +27,7 @@ and 5 domain-tailored technical resumes.`;
   return (
     <section
       id="qualifications"
-      className="min-h-screen py-20 bg-black text-white rounded-t-4xl"
+      className="min-h-screen py-12 md:py-20 bg-black text-white rounded-t-4xl"
     >
       <AnimatedHeaderSection
         subTitle={"Skills • Education • 5 Resumes • Honors"}
@@ -37,9 +37,9 @@ and 5 domain-tailored technical resumes.`;
         withScrollTrigger={true}
       />
 
-      <div className="px-6 md:px-10 max-w-7xl mx-auto mt-12 flex flex-col gap-12">
+      <div className="px-2 md:px-10 max-w-7xl mx-auto mt-8 md:mt-12 flex flex-col gap-8 md:gap-12">
         {/* Navigation Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 p-1.5 rounded-full bg-white/5 border border-white/10 w-fit mx-auto">
+        <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-1.5 p-1.5 rounded-3xl sm:rounded-full bg-white/5 border border-white/10 w-full sm:w-fit mx-auto">
           {[
             { id: "skills", icon: "/icons/lightning.png", label: "Skills Matrix", count: "8 Categories" },
             { id: "education", icon: "/icons/graduation.png", label: "Education", count: "AKGEC" },
@@ -50,13 +50,13 @@ and 5 domain-tailored technical resumes.`;
               key={tab.id}
               type="button"
               onClick={() => setActiveTab(tab.id)}
-              className={`px-5 py-2.5 rounded-full text-xs md:text-sm uppercase tracking-wider transition-all duration-300 cursor-pointer ${
+              className={`px-3 sm:px-5 py-2.5 rounded-full text-[11px] sm:text-xs md:text-sm uppercase tracking-wider transition-all duration-300 cursor-pointer ${
                 activeTab === tab.id
-                  ? "bg-white text-black font-normal shadow-lg scale-105"
+                  ? "bg-white text-black font-normal shadow-lg sm:scale-105"
                   : "text-white/60 hover:text-white hover:bg-white/10"
               }`}
             >
-              <span className="flex items-center gap-2">
+              <span className="flex items-center justify-center gap-2">
                 <img
                   src={tab.icon}
                   alt=""
@@ -98,7 +98,7 @@ and 5 domain-tailored technical resumes.`;
                 <div
                   key={resume.id}
                   data-card
-                  className="snap-start shrink-0 basis-[88%] sm:basis-[calc(50%-12px)] lg:basis-[calc(33.333%-16px)] p-8 rounded-3xl bg-white/5 border border-white/15 hover:border-gold/50 transition-all duration-300 flex flex-col justify-between group hover:bg-white/[0.08] shadow-lg opacity-100"
+                  className="snap-start shrink-0 basis-[88%] sm:basis-[calc(50%-12px)] lg:basis-[calc(33.333%-16px)] p-5 md:p-8 rounded-3xl bg-white/5 border border-white/15 hover:border-gold/50 transition-all duration-300 flex flex-col justify-between group hover:bg-white/[0.08] shadow-lg opacity-100"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
@@ -174,7 +174,7 @@ and 5 domain-tailored technical resumes.`;
             {skillsData.categories.map((category, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-3xl bg-white/5 border border-white/10 flex flex-col shadow-lg"
+                className="p-4 md:p-6 rounded-3xl bg-white/5 border border-white/10 flex flex-col shadow-lg"
               >
                 <div className="flex items-center gap-3 mb-4 pb-3 border-b border-white/10">
                   <div className="w-2 h-2 rounded-full bg-gold" />
@@ -203,7 +203,7 @@ and 5 domain-tailored technical resumes.`;
             {educationData.map((edu, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-3xl bg-white/5 border border-white/10 flex flex-col justify-between shadow-lg"
+                className="p-5 md:p-8 rounded-3xl bg-white/5 border border-white/10 flex flex-col justify-between shadow-lg"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -232,7 +232,7 @@ and 5 domain-tailored technical resumes.`;
             {achievementsData.map((item) => (
               <div
                 key={item.id}
-                className="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-gold/40 transition-all flex flex-col justify-between shadow-lg"
+                className="p-4 md:p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-gold/40 transition-all flex flex-col justify-between shadow-lg"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">

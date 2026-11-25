@@ -139,7 +139,7 @@ and cloud-native microservices.`;
             />
 
             {/* title & tagline */}
-            <div className="flex flex-col md:flex-row md:items-center justify-between px-10 text-black transition-all duration-500 md:group-hover:px-12 md:group-hover:text-white">
+            <div className="flex flex-col md:flex-row md:items-center justify-between px-5 md:px-10 text-black transition-all duration-500 md:group-hover:px-12 md:group-hover:text-white">
               <div>
                 <h2 className="lg:text-[34px] text-[26px] leading-snug font-normal">
                   {project.name}
@@ -177,7 +177,7 @@ and cloud-native microservices.`;
             </div>
 
             {/* description snippet */}
-            <div className="px-10 md:group-hover:px-12 text-black/70 md:group-hover:text-white/80 text-sm font-light max-w-4xl transition-all duration-500 my-2">
+            <div className="px-5 md:px-10 md:group-hover:px-12 text-black/70 md:group-hover:text-white/80 text-sm font-light max-w-4xl transition-all duration-500 my-2">
               <p>{project.description}</p>
             </div>
 
@@ -185,7 +185,7 @@ and cloud-native microservices.`;
             <div className="w-full h-px bg-black/20 my-2" />
 
             {/* frameworks */}
-            <div className="flex flex-wrap px-10 text-xs leading-loose uppercase transition-all duration-500 md:text-xs gap-x-4 gap-y-1 md:group-hover:px-12">
+            <div className="flex flex-wrap px-5 md:px-10 text-xs leading-loose uppercase transition-all duration-500 md:text-xs gap-x-4 gap-y-1 md:group-hover:px-12">
               {project.frameworks.map((framework) => (
                 <span
                   key={framework.id}
@@ -198,7 +198,7 @@ and cloud-native microservices.`;
 
             {/* mobile preview image */}
             {project.image && (
-              <div className="relative flex items-center justify-center mx-10 mt-4 overflow-hidden md:hidden h-[300px] rounded-2xl bg-black">
+              <div className="relative flex items-center justify-center mx-5 md:mx-10 mt-4 overflow-hidden md:hidden h-[300px] rounded-2xl bg-black">
                 {project.bgImage && (
                   <img
                     src={project.bgImage}
