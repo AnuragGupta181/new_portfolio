@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
-import { experienceData, openSourceData, personalInfo } from "../constants";
+import { experienceData, openSourceData } from "../constants";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 const Experience = () => {
@@ -256,7 +256,7 @@ and research laboratories.`;
               </div>
             </div>
             <a
-              href={personalInfo.github}
+              href={openSourceData.prsUrl}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black text-white text-sm uppercase tracking-wider hover:bg-gold hover:text-black transition-colors duration-300"

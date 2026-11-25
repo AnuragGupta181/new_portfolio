@@ -3,7 +3,7 @@ import { Planet } from "../components/Planet";
 import { Environment, Float, Lightformer } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
-import { personalInfo } from "../constants";
+import { personalInfo, openSourceData } from "../constants";
 
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
@@ -76,7 +76,14 @@ from prototype to production.`;
         <div className="flex flex-wrap items-center gap-6">
           <span>LFX Mentee @ GitMesh</span>
           <span className="hidden sm:inline">•</span>
-          <span className="hidden sm:inline">12+ Merged PRs</span>
+          <a
+            href={openSourceData.prsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline hover:text-black underline-offset-4 hover:underline"
+          >
+            12+ Merged PRs
+          </a>
           <span className="hidden sm:inline">•</span>
           <span className="hidden sm:inline">5 Target Resumes</span>
         </div>

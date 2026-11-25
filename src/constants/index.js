@@ -265,6 +265,8 @@ export const experienceData = [
 
 export const openSourceData = {
   totalPRs: "12+ Merged PRs",
+  prsUrl:
+    "https://github.com/search?q=is%3Apr+is%3Amerged+author%3AAnuraggupta181&type=pullrequests&p=2",
   contributions: [
     {
       repo: "GitMesh (The Linux Foundation)",
