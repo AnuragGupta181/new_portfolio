@@ -2,6 +2,7 @@ import { useRef } from "react";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 import { AnimatedTextLines } from "../components/AnimatedTextLines";
 import { personalInfo } from "../constants";
+import DotPortrait from "../components/DotPortrait";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -58,12 +59,9 @@ Open-Source Advocate — 12+ merged PRs across developer infrastructure, LLM end
       />
       <div className="flex flex-col items-center justify-between gap-10 md:gap-16 px-5 md:px-10 pb-10 md:pb-16 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-3xl text-white/60">
         <div className="relative flex flex-col items-center w-full lg:w-auto shrink-0">
-          <img
-            ref={imgRef}
-            src="/images/man.jpg"
-            alt={personalInfo.name}
-            className="object-cover rounded-3xl w-80 md:w-96 grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
-          />
+          <div ref={imgRef} className="w-72 md:w-96">
+            <DotPortrait name={personalInfo.name} />
+          </div>
           <div className="mt-4 text-center">
             <p className="text-lg font-normal text-white">{personalInfo.name}</p>
             <p className="text-sm tracking-widest uppercase text-white/50">

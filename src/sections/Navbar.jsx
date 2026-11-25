@@ -120,6 +120,7 @@ const Navbar = () => {
     "services",
     "about",
     "experience",
+    "pipeline",
     "work",
     "qualifications",
     "contact",

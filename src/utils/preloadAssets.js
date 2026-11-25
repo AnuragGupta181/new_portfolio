@@ -1,5 +1,5 @@
 import { useGLTF } from "@react-three/drei";
-import { projects } from "../constants";
+import { projects, skillsData } from "../constants";
 
 export const MODEL_URL = "/models/Planet.glb";
 
@@ -14,6 +14,9 @@ const imageUrls = () => {
     "graduation", "trophy", "database", "circuit", "calendar", "mail",
     "phone", "marker", "github", "code",
   ].forEach((n) => urls.add(`/icons/${n}.png`));
+  skillsData.categories.forEach((c) =>
+    c.skills.forEach((s) => s.icon && urls.add(s.icon))
+  );
   projects.forEach((p) => {
     if (p.image) urls.add(p.image);
     if (p.bgImage) urls.add(p.bgImage);

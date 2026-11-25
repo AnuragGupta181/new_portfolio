@@ -7,6 +7,8 @@ import ReactLenis from "lenis/react";
 import About from "./sections/About";
 import Experience from "./sections/Experience";
 import Works from "./sections/Works";
+import DevOpsLoop from "./sections/DevOpsLoop";
+import CustomCursor from "./components/CustomCursor";
 import Qualifications from "./sections/Qualifications";
 import ContactSummary from "./sections/ContactSummary";
 import Contact from "./sections/Contact";
@@ -64,6 +66,7 @@ const App = () => {
 
   return (
     <ReactLenis root className="relative w-full min-h-screen overflow-x-hidden">
+      <CustomCursor />
       {showLoader && (
         <div
           className={`fixed inset-0 z-[999] flex flex-col items-center justify-center bg-black text-white font-light transition-opacity duration-700 ${
@@ -91,6 +94,7 @@ const App = () => {
           <Services />
           <About />
           <Experience />
+          <DevOpsLoop />
           <Works />
           <Qualifications />
           <ContactSummary />
