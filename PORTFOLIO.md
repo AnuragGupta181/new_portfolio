@@ -18,7 +18,7 @@ open-source project called GitMesh.
 | What | Number |
 | --- | --- |
 | Hands-on experience | 1+ year |
-| Merged open-source pull requests | 12+ |
+| Merged open-source pull requests | 25+ |
 | Users my AWS platform served at the same time | 250+ |
 | Role-specific resumes | 5 |
 
@@ -33,6 +33,7 @@ open-source project called GitMesh.
 - **LinkedIn:** https://www.linkedin.com/in/anuragg1817
 - **Linktree (all my links):** https://linktr.ee/anuraggupta11
 - **Website:** https://anurag11.tech
+- **X (Twitter):** https://x.com/AnuragGupt1817
 - **Book a meeting:** https://cal.com/anurag-gupta-11
   - 15 minute intro call: https://cal.com/anurag-gupta-11/15min
   - 30 minute meeting: https://cal.com/anurag-gupta-11/30min
@@ -96,10 +97,39 @@ for about $50 of infrastructure cost.
 
 ## 4. Open source
 
-I have **12+ merged pull requests** in 3 places:
+I have **25+ merged pull requests** across GitMesh, LabVIEW MCP and community projects.
 
-| Project | PRs | What I did |
-| --- | --- | --- |
+### Major contributions
+
+**[GitMesh](https://github.com/LF-Decentralized-Trust-labs/gitmesh)** (The Linux Foundation, LFX mentee). Policy-as-code engine for open-source AI agent orchestration.
+
+- Implemented Cursor and GitHub Copilot adapter detection for workspace adapters (#458, #459).
+- Added the GitHub Actions CI workflow and improved UI route test coverage with a stable typecheck flow (#403, #399).
+- Improved the Docker quickstart docs and troubleshooting (#385).
+- Fixing inbound webhook routing in forge-sync (#433, open).
+- Scoped roadmap work as issues: policy-as-code engine with OPA, tamper-evident audit log, maintainer dashboard, doctor risk-rule engine (#435, #436, #437, #463).
+
+**[LabVIEW MCP](https://github.com/Zuehlke/labview-mcp)** (Zuehlke). MCP server that connects AI agents to LabVIEW.
+
+- Found and fixed Error 1125 on LabVIEW 2019: the pylabview composer only restamped VI versions for 2020 and later (issue #149).
+- Verified the fix on LabVIEW 2019 itself: plain VIs, subVI calls, case structures, loops and Formula Nodes load, run and save.
+- Fix merged upstream with my commit cherry-picked (PR #150), because the repo only accepts PRs from collaborators.
+
+**[Harbor Satellite](https://github.com/container-registry/harbor-satellite)** (CNCF). Container registry for edge and disconnected sites.
+
+- Fixing broken Markdown links (404s) with a Hugo link render hook and adding a right-sidebar table of contents to the docs site (#607, open).
+- Reported missing unit tests for robot-secret refresh and scheduler shutdown races (#626).
+
+**Community projects**
+
+| Project | What I did |
+| --- | --- |
+| [CityVoice](https://github.com/job4saurabh/CityVoice) | Client dashboard and responsive UI (6 merged PRs). |
+| [Kryptonite](https://github.com/lovevarshney2007/Keryptonite) | AI chatbot API. |
+| [FotoFix](https://github.com/sarthakkaushik927/Image--Processing-Tool) | ML model inference APIs (3 merged PRs). |
+| [NextGen](https://github.com/sarthakkaushik927/Coding-Plateform) | CI/CD workflow to EC2 (7 merged PRs). |
+
+--- | --- | --- |
 | [GitMesh (The Linux Foundation)](https://github.com/AnuragGupta181/gitmesh) | 5 | Detection for GitHub Copilot and Cursor adapters, automated CI with GitHub Actions, 30% more UI route test coverage, 25% faster Docker setup. |
 | [Image Processing Tool](https://github.com/AnuragGupta181/phot-fix-ml-fast) | 3 | Added ML model inference APIs and cut response time by 35%. |
 | [Kryptonite and community tools](https://github.com/AnuragGupta181/kryptonite_anu) | 4 | Added AI chatbot endpoints serving 500+ requests a day, OAuth login, and more stable sign-in. |
