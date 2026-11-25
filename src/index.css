@@ -143,3 +143,13 @@ body {
   @apply text-[42px] sm:text-[52px] md:text-[62px] lg:text-[100px];
 }
 
+
+/* Text selection in the site's gold theme */
+::selection {
+  background: #cfa355;
+  color: #000;
+}
+::-moz-selection {
+  background: #cfa355;
+  color: #000;
+}
