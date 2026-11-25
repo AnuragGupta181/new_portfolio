@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 import Marquee from "../components/Marquee";
-import { personalInfo, resumes, socials } from "../constants";
+import { personalInfo, resumes, socials, bookingOptions } from "../constants";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import gsap from "gsap";
 
@@ -46,6 +46,43 @@ I’d love to connect and discuss how I can add immediate value!`;
         />
         <div className="flex px-10 font-light text-white uppercase lg:text-[32px] text-[26px] leading-none mb-12">
           <div className="flex flex-col w-full gap-8">
+            {/* Book a meeting */}
+            <div className="social-link">
+              <h2>Book a Meeting</h2>
+              <div className="w-full h-px my-2 bg-white/30" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 normal-case">
+                {bookingOptions.map((option) => (
+                  <a
+                    key={option.id}
+                    href={option.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-4 rounded-xl bg-gold text-black hover:bg-white transition-colors flex flex-col gap-1 group"
+                  >
+                    <span className="flex items-center justify-between text-base md:text-lg font-medium">
+                      {option.title}
+                      <Icon icon="lucide:calendar-check" className="size-5" />
+                    </span>
+                    <span className="text-xs md:text-sm tracking-wide opacity-70">
+                      {option.description}
+                    </span>
+                  </a>
+                ))}
+              </div>
+              <p className="mt-3 text-xs tracking-wider normal-case text-white/50">
+                Or see all my links on{" "}
+                <a
+                  href={personalInfo.linktree}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-gold"
+                >
+                  Linktree
+                </a>
+                .
+              </p>
+            </div>
+
             {/* Email */}
             <div className="social-link">
               <h2>E-mail</h2>
@@ -106,7 +143,7 @@ I’d love to connect and discuss how I can add immediate value!`;
             <div className="social-link">
               <h2>Targeted Resumes (PDF)</h2>
               <div className="w-full h-px my-2 bg-white/30" />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
                 {resumes.map((resume) => (
                   <a
                     key={resume.id}

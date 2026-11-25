@@ -12,6 +12,8 @@ export const personalInfo = {
   github: "https://github.com/AnuragGupta181",
   linkedin: "https://www.linkedin.com/in/anuragg1817",
   website: "https://anurag11.tech",
+  linktree: "https://linktr.ee/anuraggupta11",
+  cal: "https://cal.com/anurag-gupta-11",
   stats: [
     { label: "Hands-on Experience", value: "1+ Yrs" },
     { label: "Merged Open Source PRs", value: "12+" },
@@ -643,6 +645,21 @@ export const achievementsData = [
   },
 ];
 
+export const bookingOptions = [
+  {
+    id: "15min",
+    title: "15 min intro call",
+    description: "Quick chat about a role, collaboration or project.",
+    href: "https://cal.com/anurag-gupta-11/15min",
+  },
+  {
+    id: "30min",
+    title: "30 min meeting",
+    description: "Deeper technical discussion, interview or mentoring.",
+    href: "https://cal.com/anurag-gupta-11/30min",
+  },
+];
+
 export const socials = [
   {
     name: "GitHub",
@@ -653,6 +670,16 @@ export const socials = [
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/anuragg1817",
     label: "linkedin.com/in/anuragg1817",
+  },
+  {
+    name: "Linktree",
+    href: "https://linktr.ee/anuraggupta11",
+    label: "linktr.ee/anuraggupta11",
+  },
+  {
+    name: "Book a Meet",
+    href: "https://cal.com/anurag-gupta-11",
+    label: "cal.com/anurag-gupta-11",
   },
   {
     name: "Email",

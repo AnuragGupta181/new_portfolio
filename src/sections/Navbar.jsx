@@ -138,7 +138,7 @@ const Navbar = () => {
         {/* 5 Resumes Quick Access */}
         <div className="flex flex-col gap-2 pt-4 border-t border-white/20">
           <p className="text-xs tracking-widest text-gold font-normal">
-            Download 4 Targeted Resumes
+            Download 5 Targeted Resumes
           </p>
           <div className="grid grid-cols-2 gap-2 text-[10px] tracking-wider normal-case">
             {resumes.map((resume) => (
