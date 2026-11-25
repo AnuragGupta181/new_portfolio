@@ -13,7 +13,7 @@ const Qualifications = () => {
 
   const text = `Academic rigor in Electronics & Computing,
 recognized engineering accolades,
-and 4 domain-tailored technical resumes.`;
+and 5 domain-tailored technical resumes.`;
 
   return (
     <section
@@ -21,7 +21,7 @@ and 4 domain-tailored technical resumes.`;
       className="min-h-screen py-20 bg-black text-white rounded-t-4xl"
     >
       <AnimatedHeaderSection
-        subTitle={"Skills • Education • 4 Resumes • Honors"}
+        subTitle={"Skills • Education • 5 Resumes • Honors"}
         title={"Qualifications"}
         text={text}
         textColor={"text-white"}
@@ -32,8 +32,8 @@ and 4 domain-tailored technical resumes.`;
         {/* Navigation Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-2 p-1.5 rounded-full bg-white/5 border border-white/10 w-fit mx-auto">
           {[
-            { id: "resumes", label: "📄 4 Resumes Hub", count: "4" },
-            { id: "skills", label: "⚡️ Skills Matrix", count: "7 Categories" },
+            { id: "resumes", label: "📄 5 Resumes Hub", count: "5" },
+            { id: "skills", label: "⚡️ Skills Matrix", count: "8 Categories" },
             { id: "education", label: "🎓 Education", count: "AKGEC" },
             { id: "achievements", label: "🏆 Honors & Awards", count: "5" },
           ].map((tab) => (
@@ -52,7 +52,7 @@ and 4 domain-tailored technical resumes.`;
           ))}
         </div>
 
-        {/* TAB 1: 4 Resumes Showcase Hub */}
+        {/* TAB 1: 5 Resumes Showcase Hub */}
         {activeTab === "resumes" && (
           <div className="flex flex-col gap-8 opacity-100 transition-opacity duration-300">
             <div className="text-center max-w-2xl mx-auto">

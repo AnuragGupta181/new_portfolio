@@ -15,7 +15,7 @@ from prototype to production.`;
 What drives my work:
 🚀 LFX Mentee @ The Linux Foundation — multi-agent AI orchestration, MCP servers & CI/CD automation
 ⚡️ MLOps Intern @ Carbon Crunch — fine-tuned Qwen2.5-VL-7B (45% VRAM cut) & extracted 5,000+ docs with OCR
-☁️ DevOps Lead @ Cloud Computing Cell — scaled AWS ECS microservices & MongoDB replica sets for 500+ users
+☁️ DevOps Lead @ Cloud Computing Cell — scaled AWS ECS microservices & MongoDB replica sets for 250+ users
 🤖 Robotics Research @ AKGEC — autonomous multi-UAV swarm synchronization in ROS 2 & IEEE Xplore 2nd Position
 🛠️ Open-Source Advocate — 12+ merged PRs across developer infrastructure, LLM endpoints & vision pipelines`;
 

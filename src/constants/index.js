@@ -11,11 +11,12 @@ export const personalInfo = {
   cgpa: "7.2",
   github: "https://github.com/AnuragGupta181",
   linkedin: "https://www.linkedin.com/in/anuragg1817",
+  website: "https://anurag11.tech",
   stats: [
     { label: "Hands-on Experience", value: "1+ Yrs" },
     { label: "Merged Open Source PRs", value: "12+" },
-    { label: "Concurrent Users Served", value: "500+" },
-    { label: "Specialized Resumes", value: "4 Roles" },
+    { label: "Concurrent Users Served", value: "250+" },
+    { label: "Specialized Resumes", value: "5 Roles" },
   ],
 };
 
@@ -51,10 +52,19 @@ export const resumes = [
     id: "ece",
     title: "Electronics & Robotics",
     role: "Embedded Systems, ROS 2, UAV Swarms & IoT",
-    fileName: "Anurag_Resume-ECE-10sep.pdf",
-    filePath: "/resume/Anurag_Resume-ECE-10sep.pdf",
+    fileName: "Anurag_Resume-ECE.pdf",
+    filePath: "/resume/Anurag_Resume-ECE.pdf",
     tagline: "ROS 2 Humble, PX4 Autopilot, NI LabVIEW Core I & II, ESP32, YOLOv12 Edge",
     badge: "Hardware & Edge",
+  },
+  {
+    id: "ros",
+    title: "Robotics (ROS 2) Engineer",
+    role: "ROS 2, Nav2, Autonomous Navigation & UAV Swarms",
+    fileName: "Anurag_ROS_Resume.pdf",
+    filePath: "/resume/Anura_ROS_Resume.pdf",
+    tagline: "ROS 2 Humble, Nav2, AMCL, DWB, Gazebo Classic 11, TurtleBot3, PX4, SLAM",
+    badge: "Open Robotics",
   },
 ];
 
@@ -95,6 +105,10 @@ export const servicesData = [
         title: "High Availability & Traffic Routing",
         description: "(Nginx reverse proxy, Cloudflare CDN/DDoS mitigation, zero-downtime rolling deploys)",
       },
+      {
+        title: "Kubernetes, GitOps & Observability",
+        description: "(Kubernetes, Helm, Jenkins, Argo CD & Rollouts, Trivy, SonarQube, Prometheus, Grafana)",
+      },
     ],
   },
   {
@@ -112,7 +126,7 @@ export const servicesData = [
       },
       {
         title: "Document AI & Computer Vision",
-        description: "(Multi-modal OCR with Playwright & Python, YOLOv12, OpenCV, high-throughput inference)",
+        description: "(Multi-modal OCR with Playwright & Python, YOLOv12, OpenCV, 86% extraction accuracy)",
       },
     ],
   },
@@ -128,6 +142,10 @@ export const servicesData = [
       {
         title: "Edge AI & Autonomous Robotics",
         description: "(ESP32, ESP32-CAM, real-time YOLO crop pest detection, L298N motor drivers)",
+      },
+      {
+        title: "Autonomous Navigation (Nav2)",
+        description: "(ROS 2 Humble, Nav2, AMCL, DWB, Gazebo Classic 11, TurtleBot3, 100% waypoint success)",
       },
       {
         title: "Instrumentation & Signal Processing",
@@ -151,7 +169,9 @@ export const experienceData = [
       "Engineered infrastructure for multi-agent AI orchestration and Model Context Protocol (MCP) servers across multi-repo environments.",
       "Developed TypeScript/Node.js microservices and REST API integrations, automating GitHub-based workflows and reducing manual dev tasks by 40%.",
       "Built GitHub Actions CI/CD pipelines with automated unit/integration testing, cutting build-and-test cycle time by 35%.",
-      "Optimized PostgreSQL schemas via Drizzle ORM and integrated Redis caching, boosting query response times by 30%.",
+      "Optimized PostgreSQL schemas via Drizzle ORM and integrated Redis caching, boosting query response times by 30%; resolved 20+ issues through collaborative debugging.",
+      "Improved automated triage and PR-review efficiency by 40% by implementing policy-based governance and maintainer tooling on PostgreSQL, Redis, and Drizzle ORM.",
+      "Cut Docker setup time by 25% and CI build times by 35% by optimizing GitHub Actions and Docker for the multi-agent AI platform.",
     ],
     technologies: [
       "TypeScript",
@@ -174,9 +194,10 @@ export const experienceData = [
     description:
       "Engineered high-volume multi-modal data extraction pipelines and fine-tuned open-weight vision-language models for enterprise document processing.",
     highlights: [
-      "Engineered Python document-processing and OCR pipelines that extracted structured data from 5,000+ PDFs and images into standardized JSON schemas with 90%+ accuracy.",
+      "Engineered Python document-processing and OCR pipelines that extracted structured data from 5,000+ PDFs and images into standardized JSON schemas at 86% extraction accuracy.",
       "Fine-tuned Qwen2.5-VL-7B-Instruct using Unsloth and LoRA on Lightning AI, reducing GPU VRAM consumption by 45% and accelerating training cycles by 30%.",
-      "Automated high-volume web ingestion via Playwright, maintaining 99.9% pipeline reliability and reducing manual data-entry effort by 60%.",
+      "Automated high-volume web ingestion via Playwright and vision-language models, maintaining 99.9% uptime and reducing manual data-entry effort by 60%.",
+      "Benchmarked Qwen2.5-VL inference and tuned batching and GPU utilization, improving throughput by 25% and lowering latency.",
       "Benchmarked Florence, Meta Llama, and Azure AI inference, cutting cloud runtime costs by 35%, and deployed Dockerized FastAPI REST endpoints.",
     ],
     technologies: [
@@ -199,11 +220,12 @@ export const experienceData = [
     type: "Ghaziabad, Uttar Pradesh",
     badge: "Technical Leadership",
     description:
-      "Led an engineering team of 5 to architect, containerize, and deploy scalable cloud backend systems and microservices serving 500+ concurrent users with 99.9% uptime.",
+      "Led an engineering team of 5 to architect, containerize, and deploy scalable cloud backend systems and microservices supporting 250+ concurrent users at about $50 infrastructure cost.",
     highlights: [
-      "Deployed high-availability platform on AWS (ECS, EC2, ALB) supporting 500+ concurrent users at just $50 infrastructure cost via Free Tier optimizations.",
+      "Deployed high-availability platform on AWS (ECS, EC2, ALB) supporting 250+ concurrent users with 0 latency spikes at about $50 infrastructure cost on the AWS Free Tier, running a Judge0-based assessment platform.",
       "Decomposed monolithic apps into 4+ microservices on AWS ECS with Application Load Balancer routing (CQRS pattern) enabling zero-downtime releases.",
-      "Configured multi-node MongoDB Replica Set with automated failover, Nginx reverse proxy, and Cloudflare WAF/CDN.",
+      "Configured a multi-node MongoDB Replica Set with automated failover (40% higher database throughput), plus Nginx reverse proxy, AWS WAF and Cloudflare CDN.",
+      "Decoupled compute-heavy code execution with EC2 Auto Scaling Groups, Judge0, and BullMQ + Redis queues to keep the platform responsive and secure.",
       "Architected asynchronous job processing with BullMQ + Redis, offloading compute-intensive tasks and cutting average API response time by 50%.",
       "Automated build-test-deploy with GitHub Actions CI/CD + Docker, cutting deployment time from 45 minutes to under 5 minutes.",
     ],
@@ -268,7 +290,7 @@ export const projects = [
     name: "FotoFix – AI Image Processing Platform",
     tagline: "Full-Stack Vision Suite with Background Removal, YOLO & OCR",
     description:
-      "A production full-stack platform featuring a React frontend and FastAPI backend delivering background removal, YOLO object detection, and OCR. Architected 10+ REST API endpoints as modular services with Redis caching and AWS S3 storage, cutting latency by 60% across 1,000+ uploads.",
+      "A production full-stack platform featuring a React frontend and FastAPI backend delivering background removal, YOLO object detection, and OCR. Architected 10+ REST API endpoints as modular services with Redis caching and AWS S3 storage, cutting repeat-request latency by 60% across 1,000+ uploads.",
     href: "https://github.com/AnuragGupta181/phot-fix-ml-fast",
     liveUrl: "https://image-processing-tool-c7k8.vercel.app",
     image: "/assets/projects/fotofix-ai.png",
@@ -325,7 +347,7 @@ export const projects = [
     name: "Carbon Crunch Multi-Modal OCR Pipeline",
     tagline: "Fine-Tuned Qwen-VL & High-Volume Data Ingestion",
     description:
-      "End-to-end multi-modal document extraction pipeline processing 5,000+ PDFs/images into structured JSON schemas with 90%+ extraction accuracy. Fine-tuned Qwen2.5-VL-7B-Instruct with Unsloth & LoRA on Lightning AI cutting GPU VRAM by 45%. Automated ingestion with Playwright.",
+      "End-to-end multi-modal document extraction pipeline processing 5,000+ PDFs/images into structured JSON schemas at 86% extraction accuracy. Fine-tuned Qwen2.5-VL-7B-Instruct with Unsloth & LoRA on Lightning AI, cutting GPU VRAM by 45% and training time by 30%. Benchmarked Florence, Llama and Azure AI to cut cloud runtime costs by 35%.",
     href: "https://github.com/AnuragGupta181/ocr",
     image: "/assets/projects/mobile-accessories-store.jpg",
     bgImage: "/assets/backgrounds/blanket.jpg",
@@ -344,7 +366,7 @@ export const projects = [
     name: "NextGen – Cloud Assessment & Contest Platform",
     tagline: "AWS ECS Microservices, MongoDB Replica Set & BullMQ",
     description:
-      "Enterprise assessment platform engineered for 500+ concurrent users with 99.9% uptime on AWS Free Tier ($50 total cost). Path-based ALB routing for CQRS microservices on ECS, MongoDB multi-node replica set with automated failover, BullMQ/Redis asynchronous task queues, and automated CI/CD.",
+      "Enterprise assessment platform engineered for 250+ concurrent users with 0 latency spikes on AWS at about $50 infrastructure cost. Path-based ALB routing for CQRS microservices on ECS, a MongoDB multi-node replica set with automated failover (+40% throughput), Judge0 code execution decoupled via EC2 Auto Scaling and BullMQ/Redis queues, secured by AWS WAF and Cloudflare.",
     href: "https://github.com/AnuragGupta181/Coding-Plateform",
     liveUrl: "https://coding-plateform-egyb.vercel.app/",
     image: "/assets/projects/nextgen-coding-platform.png",
@@ -357,6 +379,7 @@ export const projects = [
       { id: 5, name: "BullMQ" },
       { id: 6, name: "GitHub Actions" },
       { id: 7, name: "Nginx" },
+      { id: 8, name: "Judge0" },
     ],
   },
   {
@@ -377,20 +400,103 @@ export const projects = [
       { id: 6, name: "IoT 4.0" },
     ],
   },
+  {
+    id: 7,
+    name: "GitOps CI/CD Pipeline (Assessment Platform)",
+    tagline: "Jenkins, Argo CD, Argo Rollouts & Blue-Green Deployments",
+    description:
+      "Reusable Jenkins Shared Library on AWS EC2 running build, test, SonarQube gate and Trivy scan in 6 min 1 s. Argo CD with HMAC-verified GitHub webhooks kept 11 Kubernetes resources 100% healthy and synced, while Blue-Green rollouts via Argo Rollouts and NGINX Ingress served 231 requests with 0 HTTP 5xx errors at 2 ms average latency. Namespace-scoped Bitnami Sealed Secrets isolate CI/CD across 2 EC2 instances.",
+    href: "https://github.com/AnuragGupta181/nextgen_cd",
+    image: "/assets/projects/gitops-argocd.jpeg",
+    bgImage: "/assets/backgrounds/poster.jpg",
+    frameworks: [
+      { id: 1, name: "Jenkins" },
+      { id: 2, name: "Argo CD" },
+      { id: 3, name: "Argo Rollouts" },
+      { id: 4, name: "Trivy" },
+      { id: 5, name: "SonarQube" },
+      { id: 6, name: "Sealed Secrets" },
+    ],
+  },
+  {
+    id: 8,
+    name: "Kubernetes Deployment & Observability Stack",
+    tagline: "Helm, Prometheus, Grafana & Zero-Downtime NGINX Ingress",
+    description:
+      "Zero-downtime routing across 3 healthy backend replicas (5.9 hrs continuous uptime) using Deployments, Services, liveness/readiness probes and NGINX Ingress. Live CPU, memory, disk and network dashboards via Prometheus and Grafana Node Exporter on Helm, with cAdvisor container tracking; fixed ImagePullBackOff and reclaimed 1+ GB RAM on a 4 GiB host.",
+    href: "https://github.com/AnuragGupta181/nextgen_cd",
+    image: "/assets/projects/k8s-grafana.jpeg",
+    bgImage: "/assets/backgrounds/map.jpg",
+    frameworks: [
+      { id: 1, name: "Kubernetes" },
+      { id: 2, name: "Helm" },
+      { id: 3, name: "Prometheus" },
+      { id: 4, name: "Grafana" },
+      { id: 5, name: "NGINX Ingress" },
+    ],
+  },
+  {
+    id: 9,
+    name: "Autonomous Robot Navigation (TurtleBot3)",
+    tagline: "ROS 2 Humble, Nav2, AMCL & DWB in Gazebo Classic 11",
+    description:
+      "Fully autonomous obstacle avoidance across 5 waypoints at a 100% success rate in a 2-minute patrol, composed from upstream Nav2, AMCL, DWB and Gazebo packages with only 240 lines of original code. Fixed AMCL resetting on every launch by tracing the nav2 simple commander source (1-line fix) and validated dynamic replanning around 3 unmapped obstacles.",
+    href: "https://github.com/AnuragGupta181/turtlebot",
+    liveUrl: "https://drive.google.com/file/d/1pZclG9STVNvwEOh_FhREtxIMToPUn9KJ/view?usp=drive_link",
+    image: "/assets/projects/turtlebot-rviz.png",
+    bgImage: "/assets/backgrounds/curtains.jpg",
+    frameworks: [
+      { id: 1, name: "ROS 2 Humble" },
+      { id: 2, name: "Nav2" },
+      { id: 3, name: "AMCL" },
+      { id: 4, name: "DWB" },
+      { id: 5, name: "Gazebo Classic 11" },
+      { id: 6, name: "Python" },
+    ],
+  },
+  {
+    id: 10,
+    name: "Credit Card Fraud Detection",
+    tagline: "SMOTE, PCA & Tuned Random Forest",
+    description:
+      "Handled heavily imbalanced data with SMOTE and PCA, uncovering 65% more fraudulent patterns than baseline models. Tuned Random Forest and Logistic Regression via GridSearchCV to reach an F1-score of 85.6%.",
+    href: "https://github.com/AnuragGupta181/Fraud-Detection",
+    bgImage: "/assets/backgrounds/table.jpg",
+    frameworks: [
+      { id: 1, name: "Python" },
+      { id: 2, name: "Scikit-Learn" },
+      { id: 3, name: "SMOTE" },
+      { id: 4, name: "PCA" },
+    ],
+  },
+  {
+    id: 11,
+    name: "Room Automation System",
+    tagline: "NI Multisim Digital Logic & JK Flip-Flops",
+    description:
+      "Logic-based security system with password validation and motion-based lighting, achieving a theoretical 90% detection rate in simulation. Built from AND/OR/XOR gates and JK flip-flops in NI Multisim, replicating real-world automation logic without microcontrollers.",
+    href: null,
+    bgImage: "/assets/backgrounds/blanket.jpg",
+    frameworks: [
+      { id: 1, name: "NI Multisim" },
+      { id: 2, name: "Digital Logic" },
+      { id: 3, name: "JK Flip-Flops" },
+    ],
+  },
 ];
 
 export const skillsData = {
   categories: [
     {
       name: "Programming Languages",
-      skills: ["Python", "TypeScript", "JavaScript", "C++", "SQL", "HTML5", "CSS3"],
+      skills: ["Python", "TypeScript", "JavaScript", "C++", "SQL", "Bash", "HTML5", "CSS3"],
     },
     {
       name: "AI & Machine Learning",
       skills: [
         "Agentic AI",
         "Model Context Protocol (MCP)",
-        "Fine-Tuning (Unsloth, LoRA)",
+        "Fine-Tuning (Unsloth, LoRA, Lightning AI)",
         "Qwen2.5-VL-7B-Instruct",
         "RAG Systems",
         "LangChain & LangGraph",
@@ -398,6 +504,7 @@ export const skillsData = {
         "YOLO / YOLOv12",
         "OpenCV",
         "Document OCR",
+        "Scikit-Learn (SMOTE, PCA)",
       ],
     },
     {
@@ -411,6 +518,10 @@ export const skillsData = {
         "Nginx Reverse Proxy",
         "Cloudflare CDN / Security",
         "Zero-Downtime Deployments",
+        "Kubernetes & Helm",
+        "Jenkins, Argo CD & Argo Rollouts",
+        "Prometheus, Grafana & cAdvisor",
+        "SonarQube, Trivy & Sealed Secrets",
       ],
     },
     {
@@ -438,9 +549,11 @@ export const skillsData = {
         "PX4 Autopilot",
         "Micro-XRCE-DDS",
         "Gazebo SITL",
+        "Nav2, AMCL & DWB",
+        "TurtleBot3 & Gazebo Classic 11",
         "SLAM & A* Pathfinding",
         "NI LabVIEW Core I & II",
-        "NI MyRIO",
+        "NI myRIO & cRIO",
         "NI Multisim",
         "ESP32 & IoT 4.0",
       ],
@@ -458,6 +571,17 @@ export const skillsData = {
         "Agile / Scrum",
       ],
     },
+    {
+      name: "Core Computer Science",
+      skills: [
+        "Data Structures & Algorithms",
+        "Object-Oriented Programming",
+        "System Design",
+        "Operating Systems",
+        "DBMS",
+        "Computer Networks",
+      ],
+    },
   ],
 };
 
@@ -466,7 +590,7 @@ export const educationData = [
     degree: "B.Tech in Electronics and Computing Engineering",
     institution: "Ajay Kumar Garg Engineering College (AKGEC)",
     location: "Ghaziabad, Uttar Pradesh",
-    period: "2023 – Present",
+    period: "2024 – Present",
     score: "CGPA: 7.2",
     details:
       "Focusing on Distributed Systems, Cloud Architecture, Artificial Intelligence, and Embedded Robotics. Active technical lead in the Cloud Computing Cell.",
@@ -475,7 +599,7 @@ export const educationData = [
     degree: "Senior Secondary Education (Class XII)",
     institution: "PM SHRI Kendriya Vidyalaya",
     location: "Babina, Uttar Pradesh",
-    period: "Completed 2023",
+    period: "Completed 2024",
     score: "77%",
     details: "Mathematics, Physics, Chemistry, and Computer Science foundation.",
   },

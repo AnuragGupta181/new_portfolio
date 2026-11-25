@@ -135,7 +135,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* 4 Resumes Quick Access */}
+        {/* 5 Resumes Quick Access */}
         <div className="flex flex-col gap-2 pt-4 border-t border-white/20">
           <p className="text-xs tracking-widest text-gold font-normal">
             Download 4 Targeted Resumes

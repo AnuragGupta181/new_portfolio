@@ -4,7 +4,7 @@
 
 > 🚀 **Live Portfolio:** [anurag-gupta-learning.vercel.app](https://anurag-gupta-learning.vercel.app/)
 
-A high-performance, fully animated, 3D developer portfolio showcasing production systems, autonomous AI pipelines, cloud infrastructure, and 4 domain-tailored technical resumes.
+A high-performance, fully animated, 3D developer portfolio showcasing production systems, autonomous AI pipelines, cloud infrastructure, and 5 domain-tailored technical resumes.
 
 Built with **React (Vite)**, **Three.js / React Three Fiber**, **GSAP**, and **TailwindCSS**.
 
@@ -22,22 +22,23 @@ Built with **React (Vite)**, **Three.js / React Three Fiber**, **GSAP**, and **T
 
 ---
 
-## 📄 4 Tailored Resumes Hub
+## 📄 5 Tailored Resumes Hub
 
-This portfolio includes 4 specialized, downloadable PDF resumes located in `/public/resume`:
+This portfolio includes 5 specialized, downloadable PDF resumes located in `/public/resume`:
 
 1. **Software Engineer (`Anurag_Resume_SE.pdf`)** — Backend, Microservices, TypeScript, Node.js, FastAPI, PostgreSQL, Redis, Drizzle ORM.
 2. **AI & MLOps Engineer (`Anurag_Resume_AI.pdf`)** — Vision-Language Models (Qwen2.5-VL), Fine-Tuning (Unsloth, LoRA), MCP Servers, LangChain, LangGraph, RAG.
 3. **DevOps & Cloud Engineer (`Anurag_Resume-DevOps.pdf`)** — AWS (ECS, ALB, EC2, S3, WAF), Docker, GitHub Actions CI/CD, MongoDB Replica Sets, Nginx.
-4. **Electronics & Robotics (`Anurag_Resume-ECE-10sep.pdf`)** — ROS 2 Humble, PX4 Autopilot, UAV Swarms, NI LabVIEW Core I & II, ESP32 Edge AI.
+4. **Electronics & Robotics (`Anurag_Resume-ECE.pdf`)** — ROS 2 Humble, PX4 Autopilot, UAV Swarms, NI LabVIEW Core I & II, ESP32 Edge AI.
+5. **Robotics / ROS 2 (`Anura_ROS_Resume.pdf`)** — Nav2, AMCL, DWB, Gazebo Classic 11, TurtleBot3, PX4 swarms.
 
 ---
 
 ## 🚀 Key Highlights & Experience
 
 - **GitMesh (The Linux Foundation) — LFX Mentee:** Engineered multi-agent AI orchestration and Model Context Protocol (MCP) servers, optimized CI/CD workflows, and boosted test coverage.
-- **Carbon Crunch — MLOps Engineering Intern:** Fine-tuned Qwen2.5-VL-7B-Instruct cutting GPU VRAM by 45%, and engineered document OCR pipelines extracting 5,000+ files with 90%+ accuracy.
-- **Cloud Computing Cell (AKGEC) — ML & DevOps Lead:** Deployed AWS ECS microservices with ALB routing (CQRS pattern) and BullMQ + Redis task queues serving 500+ users with 99.9% uptime.
+- **Carbon Crunch — MLOps Engineering Intern:** Fine-tuned Qwen2.5-VL-7B-Instruct cutting GPU VRAM by 45%, and engineered document OCR pipelines extracting 5,000+ files at 86% accuracy.
+- **Cloud Computing Cell (AKGEC) — ML & DevOps Lead:** Deployed AWS ECS microservices with ALB routing (CQRS pattern) and BullMQ + Redis task queues serving 250+ concurrent users at ~$50 infrastructure cost.
 - **Tifac Lab — LabVIEW Trainee:** Engineered NI MyRIO matrix keypad digital signal processing interfaces decoding with 99% accuracy.
 - **Open Source:** 12+ merged PRs across The Linux Foundation, Image Processing Tool, and community AI developer tools.
 - **Accolades:** IEEE Xplore 2nd Position in Student Research Symposium, Top 10 Finalist in SyncUP Hackathon, Top 7% in Smart India Hackathon.

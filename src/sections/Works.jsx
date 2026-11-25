@@ -201,11 +201,13 @@ and cloud-native microservices.`;
                 alt={`${project.name}-bg-image`}
                 className="object-cover w-full h-full rounded-2xl brightness-50"
               />
-              <img
-                src={project.image}
-                alt={`${project.name}-image`}
-                className="absolute bg-center px-6 rounded-xl max-h-[220px] object-cover"
-              />
+              {project.image && (
+                <img
+                  src={project.image}
+                  alt={`${project.name}-image`}
+                  className="absolute bg-center px-6 rounded-xl max-h-[220px] object-cover"
+                />
+              )}
             </div>
           </div>
         ))}
@@ -222,11 +224,13 @@ and cloud-native microservices.`;
                 alt="bg preview"
                 className="absolute inset-0 object-cover w-full h-full brightness-40"
               />
-              <img
-                src={projects[currentIndex].image}
-                alt="preview"
-                className="relative z-10 object-contain w-full h-full p-4"
-              />
+              {projects[currentIndex].image && (
+                <img
+                  src={projects[currentIndex].image}
+                  alt="preview"
+                  className="relative z-10 object-contain w-full h-full p-4"
+                />
+              )}
             </div>
           )}
         </div>

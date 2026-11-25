@@ -76,7 +76,7 @@ from prototype to production.`;
           <span className="hidden sm:inline">•</span>
           <span className="hidden sm:inline">12+ Merged PRs</span>
           <span className="hidden sm:inline">•</span>
-          <span className="hidden sm:inline">4 Target Resumes</span>
+          <span className="hidden sm:inline">5 Target Resumes</span>
         </div>
       </div>
     </section>
