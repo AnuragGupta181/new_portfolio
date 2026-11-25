@@ -129,11 +129,6 @@ I have **25+ merged pull requests** across GitMesh, LabVIEW MCP and community pr
 | [FotoFix](https://github.com/sarthakkaushik927/Image--Processing-Tool) | ML model inference APIs (3 merged PRs). |
 | [NextGen](https://github.com/sarthakkaushik927/Coding-Plateform) | CI/CD workflow to EC2 (7 merged PRs). |
 
---- | --- | --- |
-| [GitMesh (The Linux Foundation)](https://github.com/AnuragGupta181/gitmesh) | 5 | Detection for GitHub Copilot and Cursor adapters, automated CI with GitHub Actions, 30% more UI route test coverage, 25% faster Docker setup. |
-| [Image Processing Tool](https://github.com/AnuragGupta181/phot-fix-ml-fast) | 3 | Added ML model inference APIs and cut response time by 35%. |
-| [Kryptonite and community tools](https://github.com/AnuragGupta181/kryptonite_anu) | 4 | Added AI chatbot endpoints serving 500+ requests a day, OAuth login, and more stable sign-in. |
-
 ---
 
 ## 5. Projects
