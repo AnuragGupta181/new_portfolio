@@ -320,7 +320,7 @@ export const projects = [
     description:
       "Production-ready Retrieval-Augmented Generation system using structured JSON knowledge packs, boosting website engagement by 30%. Architected autonomous agentic workflows with LangChain & LangGraph, full LLM observability via LangSmith, and scaled FastAPI microservices on AWS to absorb 80% traffic spikes.",
     href: "https://github.com/AnuragGupta181/ccc-ragbot",
-    image: "/assets/projects/apple-tech-store.jpg",
+    image: "/assets/projects/chart.png",
     bgImage: "/assets/backgrounds/map.jpg",
     frameworks: [
       { id: 1, name: "FastAPI" },
@@ -357,8 +357,6 @@ export const projects = [
     description:
       "End-to-end multi-modal document extraction pipeline processing 5,000+ PDFs/images into structured JSON schemas at 86% extraction accuracy. Fine-tuned Qwen2.5-VL-7B-Instruct with Unsloth & LoRA on Lightning AI, cutting GPU VRAM by 45% and training time by 30%. Benchmarked Florence, Llama and Azure AI to cut cloud runtime costs by 35%.",
     href: "https://github.com/AnuragGupta181/ocr",
-    image: "/assets/projects/mobile-accessories-store.jpg",
-    bgImage: "/assets/backgrounds/blanket.jpg",
     frameworks: [
       { id: 1, name: "Python" },
       { id: 2, name: "Qwen2.5-VL" },
@@ -397,8 +395,6 @@ export const projects = [
     description:
       "Autonomous agricultural robot prototype built with ESP32 and ESP32-CAM executing real-time crop pest identification via YOLOv12 at 35% lower cost than commercial solutions. Integrated L298N motor drivers for automated field navigation, potentially reducing manual labor by 80%.",
     href: "https://github.com/AnuragGupta181/Pestiside-detection",
-    image: "/assets/projects/home-decor-store.jpg",
-    bgImage: "/assets/backgrounds/table.jpg",
     frameworks: [
       { id: 1, name: "ESP32" },
       { id: 2, name: "YOLOv12" },
@@ -469,7 +465,6 @@ export const projects = [
     description:
       "Handled heavily imbalanced data with SMOTE and PCA, uncovering 65% more fraudulent patterns than baseline models. Tuned Random Forest and Logistic Regression via GridSearchCV to reach an F1-score of 85.6%.",
     href: "https://github.com/AnuragGupta181/Fraud-Detection",
-    bgImage: "/assets/backgrounds/table.jpg",
     frameworks: [
       { id: 1, name: "Python" },
       { id: 2, name: "Scikit-Learn" },
@@ -484,7 +479,6 @@ export const projects = [
     description:
       "Logic-based security system with password validation and motion-based lighting, achieving a theoretical 90% detection rate in simulation. Built from AND/OR/XOR gates and JK flip-flops in NI Multisim, replicating real-world automation logic without microcontrollers.",
     href: null,
-    bgImage: "/assets/backgrounds/blanket.jpg",
     frameworks: [
       { id: 1, name: "NI Multisim" },
       { id: 2, name: "Digital Logic" },

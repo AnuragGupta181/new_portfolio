@@ -44,7 +44,8 @@ and cloud-native microservices.`;
 
   const handleMouseEnter = (index) => {
     if (window.innerWidth < 768) return;
-    setCurrentIndex(index);
+    const hasImage = Boolean(projects[index].image);
+    setCurrentIndex(hasImage ? index : null);
 
     const el = overlayRefs.current[index];
     if (!el) return;
@@ -62,6 +63,7 @@ and cloud-native microservices.`;
       }
     );
 
+    if (!hasImage) return;
     gsap.to(previewRef.current, {
       opacity: 1,
       scale: 1,
@@ -195,20 +197,25 @@ and cloud-native microservices.`;
             </div>
 
             {/* mobile preview image */}
-            <div className="relative flex items-center justify-center px-10 mt-4 md:hidden h-[300px]">
-              <img
-                src={project.bgImage}
-                alt={`${project.name}-bg-image`}
-                className="object-cover w-full h-full rounded-2xl brightness-50"
-              />
-              {project.image && (
+            {project.image && (
+              <div className="relative flex items-center justify-center mx-10 mt-4 overflow-hidden md:hidden h-[300px] rounded-2xl bg-black">
+                {project.bgImage && (
+                  <img
+                    src={project.bgImage}
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    className="absolute inset-0 object-cover w-full h-full scale-110 blur-md opacity-40"
+                  />
+                )}
                 <img
                   src={project.image}
-                  alt={`${project.name}-image`}
-                  className="absolute bg-center px-6 rounded-xl max-h-[220px] object-cover"
+                  alt={`${project.name} preview`}
+                  loading="lazy"
+                  className="relative z-10 px-6 rounded-xl max-h-[260px] object-contain"
                 />
-              )}
-            </div>
+              </div>
+            )}
           </div>
         ))}
 
@@ -217,20 +224,21 @@ and cloud-native microservices.`;
           ref={previewRef}
           className="fixed -top-2/6 left-0 z-50 overflow-hidden border-4 border-black rounded-2xl shadow-2xl pointer-events-none w-[560px] h-[360px] md:block hidden opacity-0 bg-black"
         >
-          {currentIndex !== null && (
+          {currentIndex !== null && projects[currentIndex].image && (
             <div className="relative w-full h-full">
-              <img
-                src={projects[currentIndex].bgImage}
-                alt="bg preview"
-                className="absolute inset-0 object-cover w-full h-full brightness-40"
-              />
-              {projects[currentIndex].image && (
+              {projects[currentIndex].bgImage && (
                 <img
-                  src={projects[currentIndex].image}
-                  alt="preview"
-                  className="relative z-10 object-contain w-full h-full p-4"
+                  src={projects[currentIndex].bgImage}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 object-cover w-full h-full scale-110 blur-md opacity-40"
                 />
               )}
+              <img
+                src={projects[currentIndex].image}
+                alt="preview"
+                className="relative z-10 object-contain w-full h-full p-4"
+              />
             </div>
           )}
         </div>
