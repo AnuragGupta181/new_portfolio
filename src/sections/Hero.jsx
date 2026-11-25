@@ -18,6 +18,7 @@ from prototype to production.`;
         title={personalInfo.name}
         text={text}
         textColor={"text-black"}
+        as="h1"
       />
 
       {/* Floating 3D Planet */}
@@ -27,6 +28,7 @@ from prototype to production.`;
       >
         <Canvas
           shadows
+          dpr={[1, 1.5]}
           camera={{ position: [0, 0, -10], fov: 17.5, near: 1, far: 20 }}
         >
           <ambientLight intensity={0.5} />

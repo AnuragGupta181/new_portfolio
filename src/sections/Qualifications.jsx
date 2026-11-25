@@ -32,10 +32,10 @@ and 5 domain-tailored technical resumes.`;
         {/* Navigation Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-2 p-1.5 rounded-full bg-white/5 border border-white/10 w-fit mx-auto">
           {[
-            { id: "resumes", label: "📄 5 Resumes Hub", count: "5" },
-            { id: "skills", label: "⚡️ Skills Matrix", count: "8 Categories" },
-            { id: "education", label: "🎓 Education", count: "AKGEC" },
-            { id: "achievements", label: "🏆 Honors & Awards", count: "5" },
+            { id: "resumes", icon: "/icons/resume.png", label: "5 Resumes Hub", count: "5" },
+            { id: "skills", icon: "/icons/lightning.png", label: "Skills Matrix", count: "8 Categories" },
+            { id: "education", icon: "/icons/graduation.png", label: "Education", count: "AKGEC" },
+            { id: "achievements", icon: "/icons/trophy.png", label: "Honors & Awards", count: "5" },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -47,7 +47,17 @@ and 5 domain-tailored technical resumes.`;
                   : "text-white/60 hover:text-white hover:bg-white/10"
               }`}
             >
-              {tab.label}
+              <span className="flex items-center gap-2">
+                <img
+                  src={tab.icon}
+                  alt=""
+                  aria-hidden="true"
+                  width={20}
+                  height={20}
+                  className="size-5"
+                />
+                {tab.label}
+              </span>
             </button>
           ))}
         </div>

@@ -73,6 +73,7 @@ export const resumes = [
 export const servicesData = [
   {
     title: "Backend & Distributed Systems",
+    icon: "/icons/database.png",
     description:
       "Building high-concurrency microservices, resilient REST APIs, and event-driven architectures designed to scale effortlessly without downtime or bottleneck regressions.",
     items: [
@@ -92,6 +93,7 @@ export const servicesData = [
   },
   {
     title: "Cloud Infrastructure & DevOps",
+    icon: "/icons/cloud.png",
     description:
       "Automating deployment pipelines, containerizing workloads, and orchestrating highly available cloud infrastructure on AWS that slashes operational costs while guaranteeing 99.9% uptime.",
     items: [
@@ -115,6 +117,7 @@ export const servicesData = [
   },
   {
     title: "Agentic AI & MLOps Engineering",
+    icon: "/icons/brain.png",
     description:
       "Bridging machine learning research into production-grade systems—from fine-tuning multi-modal vision-language models to architecting autonomous agentic RAG workflows.",
     items: [
@@ -134,6 +137,7 @@ export const servicesData = [
   },
   {
     title: "Robotics & Embedded Systems",
+    icon: "/icons/circuit.png",
     description:
       "Engineering hardware-software synergies—from autonomous multi-UAV swarm synchronization to edge IoT intelligence and certified NI LabVIEW instrumentation.",
     items: [

@@ -13,11 +13,13 @@ from prototype to production.`;
   const aboutText = `Software Engineer and LFX Mentee contributing to GitMesh (The Linux Foundation), with hands-on experience across backend microservices, MLOps pipelines, and scalable cloud systems.
 
 What drives my work:
-🚀 LFX Mentee @ The Linux Foundation — multi-agent AI orchestration, MCP servers & CI/CD automation
-⚡️ MLOps Intern @ Carbon Crunch — fine-tuned Qwen2.5-VL-7B (45% VRAM cut) & extracted 5,000+ docs with OCR
-☁️ DevOps Lead @ Cloud Computing Cell — scaled AWS ECS microservices & MongoDB replica sets for 250+ users
-🤖 Robotics Research @ AKGEC — autonomous multi-UAV swarm synchronization in ROS 2 & IEEE Xplore 2nd Position
-🛠️ Open-Source Advocate — 12+ merged PRs across developer infrastructure, LLM endpoints & vision pipelines`;
+LFX Mentee @ The Linux Foundation — multi-agent AI orchestration, MCP servers & CI/CD automation
+MLOps Intern @ Carbon Crunch — fine-tuned Qwen2.5-VL-7B (45% VRAM cut) & extracted 5,000+ docs with OCR
+DevOps Lead @ Cloud Computing Cell — scaled AWS ECS microservices & MongoDB replica sets for 250+ users
+Robotics Research @ AKGEC — autonomous multi-UAV swarm synchronization in ROS 2 & IEEE Xplore 2nd Position
+Open-Source Advocate — 12+ merged PRs across developer infrastructure, LLM endpoints & vision pipelines`;
+  // One icon per non-empty line of aboutText (null = plain line).
+  const aboutIcons = [null, null, "/icons/rocket.png", "/icons/brain.png", "/icons/cloud.png", "/icons/robot.png", "/icons/toolbox.png"];
 
   const imgRef = useRef(null);
 
@@ -58,7 +60,7 @@ What drives my work:
         <div className="relative flex flex-col items-center w-full lg:w-auto shrink-0">
           <img
             ref={imgRef}
-            src="images/man.jpg"
+            src="/images/man.jpg"
             alt={personalInfo.name}
             className="object-cover rounded-3xl w-80 md:w-96 grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
           />
@@ -70,7 +72,7 @@ What drives my work:
           </div>
         </div>
         <div className="flex flex-col w-full gap-8">
-          <AnimatedTextLines text={aboutText} className={"w-full"} />
+          <AnimatedTextLines text={aboutText} icons={aboutIcons} className={"w-full"} />
           
           {/* Key Stat Badges */}
           <div className="grid grid-cols-2 gap-4 pt-4 border-t sm:grid-cols-4 border-white/10 text-white">

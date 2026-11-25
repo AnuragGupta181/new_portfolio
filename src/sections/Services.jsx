@@ -54,7 +54,19 @@ engineered for peak performance and scale.`;
         >
           <div className="flex items-center justify-between gap-4 font-light">
             <div className="flex flex-col gap-6">
-              <h2 className="text-4xl lg:text-5xl">{service.title}</h2>
+              <h2 className="flex items-center gap-4 text-4xl lg:text-5xl">
+                {service.icon && (
+                  <img
+                    src={service.icon}
+                    alt=""
+                    aria-hidden="true"
+                    width={56}
+                    height={56}
+                    className="size-10 lg:size-14 shrink-0"
+                  />
+                )}
+                {service.title}
+              </h2>
               <p className="text-xl leading-relaxed tracking-widest lg:text-2xl text-white/60 text-pretty">
                 {service.description}
               </p>

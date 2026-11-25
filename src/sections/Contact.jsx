@@ -48,7 +48,7 @@ I’d love to connect and discuss how I can add immediate value!`;
           <div className="flex flex-col w-full gap-8">
             {/* Book a meeting */}
             <div className="social-link">
-              <h2>Book a Meeting</h2>
+              <h2 className="flex items-center gap-3"><img src="/icons/calendar.png" alt="" aria-hidden="true" width={32} height={32} className="size-7 md:size-8" />Book a Meeting</h2>
               <div className="w-full h-px my-2 bg-white/30" />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 normal-case">
                 {bookingOptions.map((option) => (
@@ -85,7 +85,7 @@ I’d love to connect and discuss how I can add immediate value!`;
 
             {/* Email */}
             <div className="social-link">
-              <h2>E-mail</h2>
+              <h2 className="flex items-center gap-3"><img src="/icons/mail.png" alt="" aria-hidden="true" width={32} height={32} className="size-7 md:size-8" />E-mail</h2>
               <div className="w-full h-px my-2 bg-white/30" />
               <a
                 href={`mailto:${personalInfo.email}`}
@@ -98,7 +98,7 @@ I’d love to connect and discuss how I can add immediate value!`;
 
             {/* Phone */}
             <div className="social-link">
-              <h2>Phone</h2>
+              <h2 className="flex items-center gap-3"><img src="/icons/phone.png" alt="" aria-hidden="true" width={32} height={32} className="size-7 md:size-8" />Phone</h2>
               <div className="w-full h-px my-2 bg-white/30" />
               <a
                 href={`tel:${personalInfo.phone.replace(/[^0-9+]/g, "")}`}
@@ -111,7 +111,7 @@ I’d love to connect and discuss how I can add immediate value!`;
 
             {/* Location */}
             <div className="social-link">
-              <h2>Location</h2>
+              <h2 className="flex items-center gap-3"><img src="/icons/marker.png" alt="" aria-hidden="true" width={32} height={32} className="size-7 md:size-8" />Location</h2>
               <div className="w-full h-px my-2 bg-white/30" />
               <p className="text-xl capitalize md:text-2xl lg:text-3xl text-white/80">
                 {personalInfo.location}
@@ -120,7 +120,7 @@ I’d love to connect and discuss how I can add immediate value!`;
 
             {/* Social Media Links */}
             <div className="social-link">
-              <h2>Profiles & Network</h2>
+              <h2 className="flex items-center gap-3"><img src="/icons/github.png" alt="" aria-hidden="true" width={32} height={32} className="size-7 md:size-8" />Profiles & Network</h2>
               <div className="w-full h-px my-2 bg-white/30" />
               <div className="flex flex-wrap gap-3">
                 {socials.map((social, index) => (
@@ -141,7 +141,7 @@ I’d love to connect and discuss how I can add immediate value!`;
 
             {/* Quick Resume Direct Download Bar */}
             <div className="social-link">
-              <h2>Targeted Resumes (PDF)</h2>
+              <h2 className="flex items-center gap-3"><img src="/icons/resume.png" alt="" aria-hidden="true" width={32} height={32} className="size-7 md:size-8" />Targeted Resumes (PDF)</h2>
               <div className="w-full h-px my-2 bg-white/30" />
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
                 {resumes.map((resume) => (
